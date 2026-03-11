@@ -5,24 +5,19 @@ import {
   FaCss3,
   FaJs,
   FaReact,
-  FaNodeJs,
   FaFlask,
+  FaGithub,
+  FaGitAlt,
+  FaDatabase,
 } from "react-icons/fa";
 import {
-  SiTailwindcss,
-  SiTypescript,
-  SiNextdotjs,
-  SiMongodb,
-  SiPostgresql,
   SiCplusplus,
   SiPython,
-  SiExpress,
-  SiDjango,
-  SiPandas,
-  SiNumpy,
-  SiScikitlearn,
-  SiPlotly,
+  SiMysql,
+  SiSqlite,
+  SiPostman,
 } from "react-icons/si";
+import { VscVscode } from "react-icons/vsc";
 
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import {
@@ -37,11 +32,12 @@ import { motion } from "framer-motion";
 // ------------------- DATA -------------------
 const about = {
   title: "About me",
-  desc: "I am a results-driven Software/Web Developer with expertise in Python, Django, Flask, and full-stack web development. I enjoy designing scalable applications, automating workflows, and creating data-driven tools. I am passionate about solving problems, collaborating in teams, and building products that provide real value.",
+  desc: "Computer Science student with experience building web applications and REST APIs using Python, Flask, SQL, and React. Strong understanding of Data Structures, DBMS, and Operating Systems with 125+ LeetCode problems solved and multiple deployed projects.",
   info: [
     { fieldName: "Name", fieldValue: "Dibyanshu Chaubey" },
     { fieldName: "Email", fieldValue: "dibyanshuchaubey95@gmail.com" },
-    { fieldName: "Phone", fieldValue: "+91 84333 53722" },
+    { fieldName: "Phone", fieldValue: "+91 8433353722" },
+    { fieldName: "Location", fieldValue: "Kanpur, Uttar Pradesh, India" },
     { fieldName: "Nationality", fieldValue: "Indian" },
     { fieldName: "Freelance", fieldValue: "Available" },
     { fieldName: "Languages", fieldValue: "English, Hindi" },
@@ -50,50 +46,58 @@ const about = {
 
 const experience = {
   title: "My Experience",
-  desc: "I have built and deployed multiple projects involving automation, data analysis, and full-stack web development.",
+  desc: "Project-based hands-on experience building and deploying backend and full-stack applications.",
   items: [
-    { company: "Personal Project", position: "Auto Job Applications Bot", duration: "2025" },
-    { company: "Personal Project", position: "Fully Fledged Blog Website", duration: "2024" },
-    { company: "Personal Project", position: "Market Trends Analyzer (Google Trends)", duration: "2024" },
+    {
+      company: "Personal Project",
+      position: "WeAssist Hostel Issue Management Platform",
+      duration: "2025",
+    },
+    {
+      company: "Personal Project",
+      position: "Smart Restaurant Management System",
+      duration: "2025",
+    },
   ],
 };
 
 const education = {
   title: "My Education",
-  desc: "I'm currently pursuing my B.Tech in Computer Science Engineering with specialization in Python applications, automation, and full-stack development.",
+  desc: "Academic foundation in core computer science subjects with applied software development practice.",
   items: [
     {
       degree: "B.Tech in Computer Science",
       institute: "Kanpur Institute of Technology, Kanpur",
-      duration: "2022 - 2026",
-      grade: "CGPA 7.9",
+      duration: "Aug 2022 - May 2026",
+      grade: "CGPA: 7.9 / 10",
+    },
+    {
+      degree: "Relevant Coursework",
+      institute: "Data Structures, DBMS, Operating Systems, OOP, Software Engineering",
+      duration: "Core Subjects",
     },
   ],
 };
 
 const skills = {
   title: "My Skills",
-  desc: "Proficient in frontend and backend technologies, with strong experience in automation, data analysis, and web development.",
+  desc: "Technical skills aligned with my resume across languages, web development, databases, tools, and data analytics.",
   skilllist: [
     { icon: <FaHtml5 />, name: "HTML5" },
     { icon: <FaCss3 />, name: "CSS3" },
     { icon: <FaJs />, name: "JavaScript" },
-    { icon: <SiTypescript />, name: "Typescript" },
     { icon: <FaReact />, name: "React" },
-    { icon: <SiNextdotjs />, name: "Next.js" },
-    { icon: <FaNodeJs />, name: "Node.js" },
-    { icon: <SiExpress />, name: "Express.js" },
-    { icon: <SiDjango />, name: "Django" },
     { icon: <FaFlask />, name: "Flask" },
-    { icon: <SiMongodb />, name: "MongoDB" },
-    { icon: <SiPostgresql />, name: "PostgreSQL" },
-    { icon: <SiTailwindcss />, name: "Tailwind CSS" },
+    { icon: <SiMysql />, name: "MySQL" },
+    { icon: <SiSqlite />, name: "SQLite" },
+    { icon: <FaDatabase />, name: "SQL" },
+    { icon: <SiPostman />, name: "Postman" },
+    { icon: <FaGitAlt />, name: "Git" },
+    { icon: <FaGithub />, name: "GitHub" },
+    { icon: <VscVscode />, name: "VS Code" },
+    { icon: <FaDatabase />, name: "Power BI" },
     { icon: <SiCplusplus />, name: "C++" },
     { icon: <SiPython />, name: "Python" },
-    { icon: <SiPandas />, name: "Pandas" },
-    { icon: <SiNumpy />, name: "NumPy" },
-    { icon: <SiScikitlearn />, name: "Scikit-learn" },
-    { icon: <SiPlotly />, name: "Plotly" },
   ],
 };
 
@@ -103,7 +107,7 @@ const cpAndDsa = {
   achievements: [
     {
       platform: "LeetCode",
-      achievement: "Solved 100+ Problems",
+      achievement: "Solved 125+ problems focused on data structures and algorithms.",
       link: "https://leetcode.com/u/dibyanshuchaubey/",
     },
   ],
@@ -111,19 +115,36 @@ const cpAndDsa = {
 
 const otherAchievements = {
   title: "Other Achievements",
-  desc: "Recognition and strengths that define my approach as a developer.",
+  desc: "Resume highlights and measurable accomplishments.",
   achievements: [
     {
-      activity: "Strong DSA Foundation",
-      description: "Solved 100+ LeetCode problems, showcasing algorithmic and problem-solving skills.",
+      activity: "Hands-on Development",
+      description: "Completed 400+ hours of hands-on development building backend and full-stack projects.",
     },
     {
-      activity: "Team Collaboration",
-      description: "Worked on multiple cross-functional projects from concept to deployment.",
+      activity: "Academic Excellence Award",
+      description: "Recipient of Academic Excellence Award, Kanpur Institute of Technology (2023).",
     },
     {
-      activity: "Quick Learner",
-      description: "Adapted to new tools and technologies quickly while delivering results.",
+      activity: "TCS iON NQT (IT) - 2026",
+      description: "Overall Score: 71.7%, Hands-On Programming (Python): 86.8%.",
+    },
+    {
+      activity: "Project Delivery",
+      description: "Developed and deployed multiple software projects demonstrating practical programming experience.",
+    },
+  ],
+};
+
+const certifications = {
+  title: "Certifications",
+  desc: "Professional certification from my resume.",
+  items: [
+    {
+      name: "Employability Enhancement Programme",
+      issuer: "Centum Foundation (supported by Infosys Foundation)",
+      year: "2025",
+      link: "#",
     },
   ],
 };
@@ -146,6 +167,7 @@ const ResumePage = () => {
             <TabsTrigger value="skills">Skills</TabsTrigger>
             <TabsTrigger value="cpdsa">CP & DSA</TabsTrigger>
             <TabsTrigger value="other">Other Achievements</TabsTrigger>
+            <TabsTrigger value="certifications">Certifications</TabsTrigger>
             <TabsTrigger value="about">About me</TabsTrigger>
           </TabsList>
 
@@ -227,6 +249,34 @@ const ResumePage = () => {
                   <ul className="grid grid-cols-1 lg:grid-cols-2 gap-[30px]">
                     {otherAchievements.achievements.map((item, i) => (
                       <Card key={i} title={item.activity} subtitle={item.description} />
+                    ))}
+                  </ul>
+                </ScrollArea>
+              </Section>
+            </TabsContent>
+
+            {/* Certifications */}
+            <TabsContent value="certifications">
+              <Section title={certifications.title} desc={certifications.desc}>
+                <ScrollArea className="max-h-[460px]">
+                  <ul className="grid grid-cols-1 lg:grid-cols-2 gap-[30px]">
+                    {certifications.items.map((item, i) => (
+                      <li
+                        key={i}
+                        className="bg-[#232329] min-h-[180px] py-6 px-10 rounded-xl flex flex-col justify-center gap-2"
+                      >
+                        <h3 className="text-xl">{item.name}</h3>
+                        <p className="text-white/60">{item.issuer}</p>
+                        <p className="text-accent">{item.year}</p>
+                        <a
+                          href={item.link}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="text-accent underline"
+                        >
+                          Certificate Link
+                        </a>
+                      </li>
                     ))}
                   </ul>
                 </ScrollArea>

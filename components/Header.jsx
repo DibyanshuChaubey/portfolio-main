@@ -6,6 +6,8 @@ import { Silkscreen } from "next/font/google";
 
 // ✅ exact pixel font you had
 const silkscreen = Silkscreen({ subsets: ["latin"], weight: ["700"] });
+const hireMeLink =
+  "https://mail.google.com/mail/?view=cm&fs=1&to=dibyanshuchaubey95%40gmail.com&su=Hiring%20Inquiry%20from%20Portfolio";
 
 const Header = () => {
   return (
@@ -48,11 +50,11 @@ const Header = () => {
             ))}
           </nav>
 
-          <Link href="/contact">
+          <a href={hireMeLink} target="_blank" rel="noopener noreferrer">
             <Button className="xl:mr-6 mr-0 bg-[#00ff88] text-black font-semibold px-6 py-2 rounded-full shadow-[0_0_15px_#00ff88] hover:shadow-[0_0_25px_#00ff88] hover:scale-105 transition-all">
               Hire me
             </Button>
-          </Link>
+          </a>
 
         </div>
 

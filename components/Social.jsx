@@ -13,7 +13,7 @@ const socials = [
   },
 {
   icon: <SiLeetcode color="#FFA116" />,
-  path: "https://leetcode.com/u/dibyanshu_chaubey/",
+  path: "https://leetcode.com/u/dibyanshuchaubey/",
 }
 
 

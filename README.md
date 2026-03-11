@@ -20,6 +20,20 @@ You can start editing the page by modifying `app/page.js`. The page auto-updates
 
 This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
+## Contact / Hire Me Behavior
+
+This portfolio uses a simple Gmail compose flow (no backend mail delivery).
+
+- Clicking `Hire me` opens Gmail compose with your recipient address pre-filled.
+- Submitting the contact form opens Gmail compose with `to`, `subject`, and message body pre-filled from the form.
+- If Gmail web cannot open (popup blocked), it falls back to `mailto:`.
+
+Install dependencies after pulling changes:
+
+```bash
+npm install
+```
+
 ## Learn More
 
 To learn more about Next.js, take a look at the following resources:

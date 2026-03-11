@@ -4,12 +4,12 @@ import CountUp from "react-countup"
 const stats = [
   
   {
-    num: 100,
+    num: 125,
     text: "+ Problems Solved on LeetCode",
   },
   {
-    num: 5,
-    text: "+ Ongoing Projects",
+    num: 2,
+    text: "Major Deployed Projects",
   },
 
 

@@ -19,51 +19,48 @@ import WorkSliderButtons from "@/components/WorkSliderButtons";
 const projects = [
   {
     num: "01",
-    category: "Automation Project",
-    title: "Auto Job Applications Bot",
+    category: "Issue Management Platform",
+    title: "WeAssist Hostel Issue Management Platform",
     description:
-      "Automated LinkedIn job applications using Python and Selenium. Configurable for keywords, location, and experience level. Scaled from 10 to 100+ applications per day with error handling, rate limiting, and logging.",
+      "Web platform for students to report and track hostel maintenance issues.",
+    highlights: [
+      "Developed 28+ REST APIs for complaint submission, tracking, and resolution.",
+      "Implemented JWT authentication with role-based access for students and administrators.",
+      "Designed schemas for users, complaints, and issue status.",
+      "Deployed using Gunicorn on cloud hosting.",
+    ],
     stack: [
       { name: "Python" },
-      { name: "Selenium" },
-      { name: "Automation" },
+      { name: "Flask" },
+      { name: "SQLAlchemy" },
+      { name: "MySQL" },
+      { name: "JWT" },
     ],
-    image: "/assets/job-bot.png", // replace with actual screenshot
-    live: "",
-    github: "https://github.com/DibyanshuChaubey", // replace with repo link if available
+    image: "/assets/Screenshot 2026-03-11 231630.png",
+    live: "https://weassist-seven.vercel.app",
+    github: "",
   },
   {
     num: "02",
-    category: "Full Stack Project",
-    title: "Fully Fledged Blog Website",
+    category: "Restaurant Management System",
+    title: "Smart Restaurant Management System",
     description:
-      "A complete blog platform with authentication, CRUD, commenting, and pagination. Built with Django, deployed on Heroku, and optimized with PostgreSQL caching. Achieved 200+ monthly active users.",
-    stack: [
-      { name: "Django" },
-      { name: "HTML/CSS/JS" },
-      { name: "PostgreSQL" },
-      { name: "Heroku" },
+      "Full-stack restaurant system for digital ordering and reservations.",
+    highlights: [
+      "Designed MySQL schemas for orders, reservations, and menu data.",
+      "Built REST APIs to manage orders, menu updates, and bookings.",
+      "Implemented a natural language interface to convert user queries into SQL searches.",
+      "Created dashboards with Streamlit and Power BI to visualize sales trends.",
     ],
-    image: "/assets/blog.png", // replace with actual screenshot
-    live: "",
-    github: "https://github.com/DibyanshuChaubey", // replace with repo link if available
-  },
-  {
-    num: "03",
-    category: "Data & ML Project",
-    title: "Market Trends Analyzer",
-    description:
-      "Collected and analyzed 10k+ keyword data points using Google Trends API. Generated visual reports and trend forecasts using Pandas and Matplotlib. Automated weekly reporting with reusable dashboard templates.",
     stack: [
       { name: "Python" },
-      { name: "Pandas" },
-      { name: "Matplotlib" },
-      { name: "Plotly" },
-      { name: "Google Trends API" },
+      { name: "Flask" },
+      { name: "MySQL" },
+      { name: "React" },
     ],
-    image: "/assets/market-trends.png", // replace with actual screenshot
-    live: "",
-    github: "https://github.com/DibyanshuChaubey", // replace with repo link if available
+    image: "/assets/Screenshot 2026-03-11 231131.png",
+    live: "https://smart-restaurant-project.onrender.com",
+    github: "",
   },
 ];
 
@@ -96,6 +93,11 @@ const WorkPage = () => {
               </h2>
               <p className="text-accent text-lg">{project.category}</p>
               <p className="text-white/60">{project.description}</p>
+              <ul className="list-disc pl-5 space-y-2 text-white/70">
+                {project.highlights.map((point, index) => (
+                  <li key={index}>{point}</li>
+                ))}
+              </ul>
               <ul className="grid grid-cols-1 xl:grid-cols-3 gap-4">
                 {project.stack.map((stack, index) => (
                   <li key={index} className="text-xl text-accent">

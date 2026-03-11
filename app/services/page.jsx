@@ -4,32 +4,32 @@ import Link from "next/link";
 const services = [
   {
     num: "01",
-    title: "Full Stack Web Development",
-    desc: "Building scalable, responsive websites and web applications using Django, Flask, React, and Next.js.",
+    title: "Flask API Development",
+    desc: "Building secure and scalable REST APIs using Flask, SQLAlchemy, JWT authentication, and MySQL.",
     link: "/services/fullstack",
   },
   {
     num: "02",
-    title: "Python Automation",
-    desc: "Automating workflows, web scraping, and custom bots using Python, Selenium, and BeautifulSoup.",
+    title: "Full-Stack Web Applications",
+    desc: "Developing end-to-end web applications with Python/Flask backend and React frontend for real use cases.",
     link: "/services/automation",
   },
   {
     num: "03",
-    title: "Data Analysis & Visualization",
-    desc: "Transforming raw data into insights with Pandas, NumPy, Matplotlib, and Plotly.",
+    title: "Database Design & Optimization",
+    desc: "Designing relational schemas for users, orders, reservations, complaints, and operational workflows using SQL.",
     link: "/services/data-ml",
   },
   {
     num: "04",
-    title: "Backend Development",
-    desc: "Designing robust APIs, database schemas, and server-side applications with Django, Flask, Express, and PostgreSQL.",
+    title: "Dashboard & Analytics",
+    desc: "Creating actionable dashboards using Power BI and Streamlit to visualize trends, KPIs, and business performance.",
     link: "/services/backend",
   },
   {
     num: "05",
-    title: "Frontend Development",
-    desc: "Creating modern, user-friendly, and responsive UIs with React, Next.js, Tailwind CSS, and TypeScript.",
+    title: "Problem Solving & DSA",
+    desc: "Applying strong Data Structures and Algorithms fundamentals (125+ LeetCode problems solved) to build efficient solutions.",
     link: "/services/frontend",
   },
 ];

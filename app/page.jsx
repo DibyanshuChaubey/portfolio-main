@@ -7,14 +7,13 @@ import Stats from "@/components/Stats";
 import { Button } from "@/components/ui/button";
 import { FiDownload } from "react-icons/fi";
 
-// ✅ Place your resume inside /public/assets and reference it like this:
-const resume = "/assets/DibyanshuChaubey_Resume.pdf";
+const resume = "/assets/Dibyanshu_Chaubey_Resume_Updated.pdf";
 
 const Home = () => {
   const handleResumeDownload = () => {
     const link = document.createElement("a");
     link.href = resume;
-    link.download = "Dibyanshu_Chaubey_Resume.pdf"; // ✅ correct filename
+    link.download = "Dibyanshu_Chaubey_Resume_Updated.pdf";
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
@@ -28,7 +27,7 @@ const Home = () => {
           {/* Text Section */}
           <div className="text-center xl:text-left order-2 xl:order-none">
             <span className="text-xl font-[var(--font-orbitron)] text-accent tracking-widest">
-              Software / Web Developer
+              Computer Science Student · Python & Flask Developer
             </span>
 <h1 className="mb-6 text-5xl xl:text-7xl font-extrabold leading-tight titan-one">
   <span className="block text-white">Hello I&apos;m</span>
@@ -45,9 +44,9 @@ const Home = () => {
 
 
             <p className="max-w-[500px] mb-9 text-white/80 libre-baskerville-bold">
-              Results-driven developer skilled in <strong>Python, Django, Flask</strong> 
-              and full-stack web development. Passionate about building scalable 
-              applications, automation, and data-driven tools.
+              Computer Science student with hands-on experience building web
+              applications and REST APIs using <strong>Python, Flask, SQL, and React</strong>.
+              Strong in DSA, DBMS, and Operating Systems with 125+ LeetCode problems solved.
             </p>
 
             {/* Buttons & Socials */}
