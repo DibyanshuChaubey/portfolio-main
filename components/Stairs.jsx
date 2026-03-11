@@ -2,9 +2,9 @@
 import { motion } from "framer-motion";
 
 const stairAnimation = {
-  initial: { top: "0%" },
-  animate: { top: "100%" },
-  exit: { top: ["100%", "0%"] },
+  initial: { y: "0%" },
+  animate: { y: "100%" },
+  exit: { y: ["100%", "0%"] },
 };
 
 const Stairs = ({ stairLength = 8 }) => {
@@ -20,10 +20,11 @@ const Stairs = ({ stairLength = 8 }) => {
           exit="exit"
           variants={stairAnimation}
           transition={{
-            duration: 0.8,                     // smoother
-            delay: reverseIndex(index) * 0.05, // smaller gap
-            ease: [0.6, 0.01, -0.05, 0.95],   // smooth easing
+            duration: 0.9,
+            delay: reverseIndex(index) * 0.06,
+            ease: [0.22, 1, 0.36, 1],
           }}
+          style={{ willChange: "transform" }}
           className={`flex-1 w-full relative ${
             index % 2 === 0 ? "bg-accent" : "bg-background"
           }`}
