@@ -9,18 +9,16 @@ const StairTransition = () => {
   return (
     <AnimatePresence mode="wait">
       <motion.div key={pathname} className="fixed inset-0 z-40 pointer-events-none">
-        {/* Stairs */}
-        <div className="h-screen w-screen flex">
+        <div className="absolute inset-0">
           <Stairs stairLength={8} />
         </div>
 
-        {/* Background fade */}
         <motion.div
-          className="h-screen w-screen bg-background absolute top-0 left-0"
+          className="absolute inset-0 bg-background"
           initial={{ opacity: 1 }}
           animate={{
             opacity: 0,
-            transition: { delay: 1.15, duration: 0.45, ease: "easeInOut" },
+            transition: { delay: 0.9, duration: 0.4, ease: "easeInOut" },
           }}
           exit={{ opacity: 1 }}
         />
