@@ -1,35 +1,43 @@
 "use client";
 import { motion } from "framer-motion";
 
-const Stairs = ({ stairLength = 8 }) => {
-  const segmentHeight = 100 / stairLength;
-  const getDelay = (index) => (stairLength - index - 1) * 0.055;
+const CircularReveal = ({ gridSize = 6 }) => {
+  const totalSquares = gridSize * gridSize;
+  const squareWidth = 100 / gridSize;
+
+  const getDelay = (index) => {
+    const row = Math.floor(index / gridSize);
+    const col = index % gridSize;
+    const distance = Math.sqrt(
+      (row - gridSize / 2) ** 2 + (col - gridSize / 2) ** 2
+    );
+    return distance * 0.04;
+  };
 
   return (
-    <div className="absolute inset-0 z-40 overflow-hidden">
-      {[...Array(stairLength)].map((_, index) => (
-        <motion.div
-          key={index}
-          initial={{ y: "0vh" }}
-          animate={{ y: "120vh" }}
-          exit={{ y: ["120vh", "0vh"] }}
-          transition={{
-            duration: 0.85,
-            delay: getDelay(index),
-            ease: [0.22, 1, 0.36, 1],
-          }}
-          style={{
-            height: `${segmentHeight}%`,
-            top: `${index * segmentHeight}%`,
-            willChange: "transform",
-          }}
-          className={`absolute left-0 w-full ${
-            index % 2 === 0 ? "bg-accent" : "bg-background"
-          }`}
-        />
-      ))}
+    <div className="absolute inset-0 z-40 grid overflow-hidden">
+      <div className="grid h-full w-full" style={{ gridTemplateColumns: `repeat(${gridSize}, 1fr)` }}>
+        {[...Array(totalSquares)].map((_, index) => (
+          <motion.div
+            key={index}
+            initial={{ scale: 0, opacity: 1 }}
+            animate={{ scale: 1, opacity: 1 }}
+            exit={{ scale: 0, opacity: 1 }}
+            transition={{
+              duration: 0.7,
+              delay: getDelay(index),
+              ease: "easeOut",
+            }}
+            className="origin-center bg-accent"
+            style={{
+              transformOrigin: "center center",
+              willChange: "transform",
+            }}
+          />
+        ))}
+      </div>
     </div>
   );
 };
 
-export default Stairs;
+export default CircularReveal;

@@ -8,14 +8,13 @@ const PageTransition = ({ children }) => {
   return (
     <AnimatePresence mode="wait">
       <motion.div key={pathname} className="relative">
-        {/* Overlay transition */}
         <motion.div
           initial={{ opacity: 1 }}
           animate={{
             opacity: 0,
             transition: {
-              delay: 0.9,
-              duration: 0.45,
+              delay: 0.6,
+              duration: 0.35,
               ease: "easeInOut",
             },
           }}
