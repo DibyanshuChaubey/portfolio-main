@@ -27,7 +27,7 @@ const CircularReveal = ({ gridSize = 6 }) => {
               delay: getDelay(index),
               ease: [0.22, 1, 0.36, 1],
             }}
-            className="origin-center bg-primary"
+            className="origin-center bg-accent"
             style={{
               transformOrigin: "center center",
               willChange: "transform",
