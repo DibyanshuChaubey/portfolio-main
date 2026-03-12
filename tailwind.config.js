@@ -25,7 +25,7 @@ module.exports = {
         primary: "var(--font-geist-mono)",
       },
       colors:{
-        primary: "#161b2e",
+        primary: "#1d2742",
         accent:{
           DEFAULT: "#6366f1",
           hover: "#4f46e5",

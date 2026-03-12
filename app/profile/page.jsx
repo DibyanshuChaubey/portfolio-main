@@ -208,7 +208,7 @@ const ResumePage = () => {
                     {skills.skilllist.map((skill, i) => (
                       <TooltipProvider key={i} delayDuration={100}>
                         <Tooltip>
-                          <TooltipTrigger className="w-full h-[150px] bg-[#232329] rounded-xl flex justify-center items-center group">
+                          <TooltipTrigger className="w-full h-[150px] bg-white/5 border border-white/10 rounded-xl flex justify-center items-center group">
                             <div className="text-6xl group-hover:text-accent transition-all duration-300">
                               {skill.icon}
                             </div>
@@ -230,7 +230,7 @@ const ResumePage = () => {
                 <ScrollArea className="max-h-[460px]">
                   <ul className="grid grid-cols-1 lg:grid-cols-2 gap-[30px]">
                     {cpAndDsa.achievements.map((item, i) => (
-                      <li key={i} className="bg-[#232329] min-h-[180px] py-6 px-10 rounded-xl flex flex-col justify-center gap-2">
+                      <li key={i} className="bg-white/5 border border-white/10 min-h-[180px] py-6 px-10 rounded-xl flex flex-col justify-center gap-2">
                         <a href={item.link} target="_blank" className="text-accent text-2xl underline">
                           {item.platform}
                         </a>
@@ -263,7 +263,7 @@ const ResumePage = () => {
                     {certifications.items.map((item, i) => (
                       <li
                         key={i}
-                        className="bg-[#232329] min-h-[180px] py-6 px-10 rounded-xl flex flex-col justify-center gap-2"
+                        className="bg-white/5 border border-white/10 min-h-[180px] py-6 px-10 rounded-xl flex flex-col justify-center gap-2"
                       >
                         <h3 className="text-xl">{item.name}</h3>
                         <p className="text-white/60">{item.issuer}</p>
@@ -288,7 +288,7 @@ const ResumePage = () => {
               <Section title={about.title} desc={about.desc}>
                 <ul className="grid grid-cols-1 xl:grid-cols-2 gap-y-6 max-w-[620px] mx-auto xl:mx-0">
                   {about.info.map((item, i) => (
-                    <li key={i} className="flex justify-between gap-4 bg-[#232329] px-4 py-3 rounded-md">
+                    <li key={i} className="flex justify-between gap-4 bg-white/5 border border-white/10 px-4 py-3 rounded-md">
                       <span className="text-white/60">{item.fieldName}</span>
                       <span className="text-xl">{item.fieldValue}</span>
                     </li>
@@ -313,7 +313,7 @@ const Section = ({ title, desc, children }) => (
 );
 
 const Card = ({ duration, title, subtitle, extra }) => (
-  <li className="bg-[#232329] min-h-[180px] py-6 px-10 rounded-xl flex flex-col justify-center gap-2">
+  <li className="bg-white/5 border border-white/10 min-h-[180px] py-6 px-10 rounded-xl flex flex-col justify-center gap-2">
     {duration && <span className="text-accent">{duration}</span>}
     <h3 className="text-xl">{title}</h3>
     {subtitle && <p className="text-white/60">{subtitle}</p>}

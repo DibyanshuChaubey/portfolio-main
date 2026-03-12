@@ -215,7 +215,7 @@ const Contact = () => {
             <form
               onSubmit={handleSubmit}
               noValidate
-              className="flex flex-col gap-6 rounded-xl bg-[#27272c] p-8 md:p-10"
+              className="flex flex-col gap-6 rounded-xl bg-white/5 p-8 md:p-10"
             >
               <div className="space-y-3">
                 <h1 id="contact-heading" className="text-4xl text-accent">
@@ -414,7 +414,7 @@ const Contact = () => {
 
                   return (
                     <li key={item.title} className="flex items-center gap-6">
-                      <div className="flex h-[52px] w-[52px] items-center justify-center rounded-md bg-[#27272c] text-accent xl:h-[72px] xl:w-[72px]">
+                      <div className="flex h-[52px] w-[52px] items-center justify-center rounded-md bg-white/5 text-accent xl:h-[72px] xl:w-[72px]">
                         <div className="text-[28px]" aria-hidden="true">
                           <Icon />
                         </div>

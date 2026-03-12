@@ -149,7 +149,7 @@ const WorkPage = () => {
             >
               {projects.map((project, index) => (
                 <SwiperSlide key={index} className="w-full">
-                  <div className="h-[460px] relative group flex justify-center items-center bg-[#232329]">
+                  <div className="h-[460px] relative group flex justify-center items-center bg-white/5 rounded-xl border border-white/10">
                     <div className="absolute top-0 bottom-0 w-full h-full bg-black/10 z-10"></div>
                     <div className="relative w-full h-full">
                       <Image

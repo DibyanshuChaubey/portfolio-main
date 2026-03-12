@@ -43,7 +43,7 @@ const Services = () => {
           {services.map((service, index) => (
             <div
               key={index}
-              className="group bg-[#232329] p-8 rounded-xl relative overflow-hidden"
+              className="group bg-white/5 border border-white/10 p-8 rounded-xl relative overflow-hidden"
             >
               <div className="text-5xl text-accent font-bold mb-4">
                 {service.num}
