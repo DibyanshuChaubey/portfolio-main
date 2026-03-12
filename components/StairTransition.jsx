@@ -14,11 +14,11 @@ const StairTransition = () => {
         </div>
 
         <motion.div
-          className="absolute inset-0 bg-background/40 backdrop-blur-xs"
+          className="absolute inset-0 bg-background"
           initial={{ opacity: 1 }}
           animate={{
             opacity: 0,
-            transition: { delay: 0.7, duration: 0.3, ease: "easeInOut" },
+            transition: { delay: 0.45, duration: 0.28, ease: "easeInOut" },
           }}
           exit={{ opacity: 1 }}
         />

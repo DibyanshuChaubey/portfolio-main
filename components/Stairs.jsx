@@ -3,7 +3,6 @@ import { motion } from "framer-motion";
 
 const CircularReveal = ({ gridSize = 6 }) => {
   const totalSquares = gridSize * gridSize;
-  const squareWidth = 100 / gridSize;
 
   const getDelay = (index) => {
     const row = Math.floor(index / gridSize);
@@ -20,15 +19,15 @@ const CircularReveal = ({ gridSize = 6 }) => {
         {[...Array(totalSquares)].map((_, index) => (
           <motion.div
             key={index}
-            initial={{ scale: 0, opacity: 1 }}
-            animate={{ scale: 1, opacity: 1 }}
-            exit={{ scale: 0, opacity: 1 }}
+            initial={{ scale: 1, opacity: 1 }}
+            animate={{ scale: 0, opacity: 0 }}
+            exit={{ scale: 1, opacity: 1 }}
             transition={{
-              duration: 0.7,
+              duration: 0.55,
               delay: getDelay(index),
-              ease: "easeOut",
+              ease: [0.22, 1, 0.36, 1],
             }}
-            className="origin-center bg-accent"
+            className="origin-center bg-primary"
             style={{
               transformOrigin: "center center",
               willChange: "transform",

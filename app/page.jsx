@@ -31,7 +31,7 @@ const Home = () => {
             </span>
 <h1 className="mb-6 text-5xl xl:text-7xl font-extrabold leading-tight titan-one">
   <span className="block text-white">Hello I&apos;m</span>
-  <span className="block text-accent drop-shadow-[0_0_1px_rgba(0,255,136,0.6)]">
+  <span className="block text-accent drop-shadow-[0_0_4px_rgba(99,102,241,0.45)]">
   Dibyanshu Chaubey
 </span>
 
