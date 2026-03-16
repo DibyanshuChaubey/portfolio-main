@@ -11,22 +11,27 @@ import WorkSliderButtons from "@/components/WorkSliderButtons";
 const projects = [
   {
     num: "01",
-    category: "Issue Management Platform",
+    category: "Full-Stack Hostel Operations Platform",
     title: "WeAssist Intelligent Hostel Management Platform",
     description:
-      "Web platform for students to report and track hostel maintenance issues.",
+      "Role-based platform for hostel issue reporting and event management, built to improve transparency.",
     highlights: [
-      "Developed 28+ REST APIs for complaint submission, tracking, and resolution.",
-      "Implemented JWT authentication with role-based access for students and administrators.",
-      "Designed schemas for users, complaints, and issue status.",
-      "Deployed using Gunicorn on cloud hosting.",
+      "React + TypeScript frontend with Flask API backend (JWT auth, SQLAlchemy, migrations).",
+      "Issue workflow with strict state transitions and reporter-only final closure.",
+      "User verification flow, admin notes, and status logs for traceability.",
+      "Event CRUD with registration/slot tracking and AI priority suggestion with fallback"
     ],
     stack: [
       { name: "Python" },
+      { name: "TypeScript" },
+      { name: "React" },
+      { name: "Tailwind CSS" },
       { name: "Flask" },
       { name: "SQLAlchemy" },
-      { name: "MySQL" },
+      { name: "SQLite" },
+      { name: "PostgreSQL" },
       { name: "JWT" },
+      { name: "Joblib" },
     ],
     image: "/assets/Screenshot 2026-03-11 231630.png",
     live: "https://weassist-seven.vercel.app",
