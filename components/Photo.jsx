@@ -1,11 +1,13 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { motion, useReducedMotion } from "framer-motion";
 import Image from "next/image";
 
 const Photo = () => {
+  const shouldReduceMotion = useReducedMotion();
+
   return (
-    <div className="w-full h-full relative flex items-center justify-center">
+    <div className="relative flex h-full w-full items-center justify-center py-4 xl:py-8">
       <motion.div
         initial={{ opacity: 0, y: 16 }}
         animate={{
@@ -21,9 +23,21 @@ const Photo = () => {
       >
         <motion.div
           aria-hidden="true"
-          className="absolute h-[220px] w-[220px] xl:h-[360px] xl:w-[360px] rounded-full bg-accent/30 blur-3xl"
-          animate={{ scale: [1, 1.08, 1], opacity: [0.45, 0.75, 0.45] }}
-          transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
+          className="absolute h-[240px] w-[240px] rounded-full bg-accent/18 blur-3xl xl:h-[380px] xl:w-[380px]"
+          animate={
+            shouldReduceMotion
+              ? { opacity: 0.55 }
+              : { scale: [1, 1.06, 1], opacity: [0.35, 0.58, 0.35] }
+          }
+          transition={{ duration: 7, repeat: Infinity, ease: "easeInOut" }}
+        />
+        <div className="absolute h-[300px] w-[300px] rounded-full border border-white/8 bg-white/[0.02] backdrop-blur-[2px] xl:h-[500px] xl:w-[500px]" />
+        <div className="absolute h-[276px] w-[276px] rounded-full border border-white/10 xl:h-[458px] xl:w-[458px]" />
+        <motion.div
+          aria-hidden="true"
+          className="absolute bottom-0 h-[54px] w-[180px] rounded-full bg-black/35 blur-2xl xl:h-[70px] xl:w-[250px]"
+          animate={shouldReduceMotion ? undefined : { scaleX: [1, 1.08, 1], opacity: [0.3, 0.42, 0.3] }}
+          transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
         />
 
         <motion.div
@@ -37,13 +51,13 @@ const Photo = () => {
               ease: "easeInOut",
             },
           }}
-          className="relative overflow-hidden rounded-full w-[260px] h-[260px] xl:w-[430px] xl:h-[430px] z-10"
-          whileHover={{ scale: 1.02 }}
+          className="relative z-10 h-[260px] w-[260px] overflow-hidden rounded-full border border-white/12 bg-[radial-gradient(circle_at_50%_28%,rgba(255,255,255,0.14),rgba(255,255,255,0.03)_48%,transparent_72%)] shadow-[0_24px_90px_rgba(0,0,0,0.28)] xl:h-[430px] xl:w-[430px]"
+          whileHover={shouldReduceMotion ? undefined : { scale: 1.015, y: -4 }}
         >
           <motion.div
-            animate={{ y: [0, -8, 0] }}
-            transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
-            className="relative h-full w-full"
+            animate={shouldReduceMotion ? undefined : { y: [0, -7, 0] }}
+            transition={{ duration: 5.8, repeat: Infinity, ease: "easeInOut" }}
+            className="relative h-full w-full scale-[1.05] xl:scale-[1.03]"
           >
             <Image
               src="/assets/new_img-removebg-preview.png"
@@ -51,13 +65,13 @@ const Photo = () => {
               priority
               quality={100}
               fill
-              className="object-contain"
+              className="object-contain object-[center_18%]"
             />
           </motion.div>
         </motion.div>
 
         <motion.svg
-          className="absolute w-[290px] xl:w-[486px] h-[290px] xl:h-[486px] z-20 pointer-events-none"
+          className="pointer-events-none absolute z-20 h-[292px] w-[292px] xl:h-[490px] xl:w-[490px]"
           fill="transparent"
           viewBox="0 0 506 506"
           xmlns="http://www.w3.org/2000/svg"
@@ -66,28 +80,40 @@ const Photo = () => {
             cx="253"
             cy="253"
             r="250"
+            stroke="rgba(255,255,255,0.12)"
+            strokeWidth="1.5"
+          />
+          <motion.circle
+            cx="253"
+            cy="253"
+            r="250"
             stroke="var(--accent)"
-            strokeWidth="3"
+            strokeWidth="2.75"
             strokeLinecap="round"
             strokeLinejoin="round"
             initial={{
-              strokeDasharray: "18 22",
+              strokeDasharray: "14 28",
             }}
             animate={{
-              strokeDasharray: [
-                "18 22",
-                "32 14",
-                "18 22",
-              ],
-              rotate: [0, 360],
+              strokeDasharray: ["14 28", "24 18", "14 28"],
+              rotate: shouldReduceMotion ? 0 : [0, 360],
             }}
             transition={{
-              duration: 14,
-              repeat: Infinity,
+              duration: 18,
+              repeat: shouldReduceMotion ? 0 : Infinity,
               ease: "linear",
             }}
           />
         </motion.svg>
+
+        <motion.div
+          aria-hidden="true"
+          className="absolute right-[6%] top-[14%] z-30 rounded-full border border-white/12 bg-white/[0.05] px-3 py-1.5 text-[10px] uppercase tracking-[0.22em] text-white/65 backdrop-blur-md xl:right-[8%] xl:top-[16%]"
+          animate={shouldReduceMotion ? undefined : { y: [0, -8, 0] }}
+          transition={{ duration: 5.5, repeat: Infinity, ease: "easeInOut" }}
+        >
+          Full Stack
+        </motion.div>
       </motion.div>
     </div>
   );

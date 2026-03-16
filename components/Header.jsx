@@ -11,20 +11,18 @@ const hireMeLink =
 
 const Header = () => {
   return (
-    <header className="py-6 xl:py-8 text-white fixed w-full top-0 z-[9999] bg-background/70 backdrop-blur-md border-b border-white/10">
-      <div className="container mx-auto flex justify-between items-center">
-        {/* LOGO */}
+    <header className="fixed top-0 z-[9999] w-full border-b border-white/10 bg-background/55 text-white backdrop-blur-xl">
+      <div className="container mx-auto flex items-center justify-between py-5 xl:py-6">
         <Link href="/">
           <h1
-            className={`text-3xl xl:text-4xl font-bold tracking-widest flex items-center gap-1 ${silkscreen.className}`}
+            className={`flex items-center gap-1 text-2xl font-bold tracking-[0.2em] xl:text-3xl ${silkscreen.className}`}
           >
             <span className="text-accent">&lt;</span>
-            {/* pixel drop + soft neon glow */}
             <span
               className="uppercase"
               style={{
                 textShadow:
-                  "0 2px 0 rgba(0,0,0,0.55), 0 0 10px rgba(99,102,241,0.35)",
+                  "0 2px 0 rgba(0,0,0,0.45), 0 0 18px rgba(124,108,255,0.25)",
               }}
             >
               DIBYANSHU
@@ -33,32 +31,26 @@ const Header = () => {
           </h1>
         </Link>
 
-        {/* DESKTOP NAV */}
-        <div className="hidden xl:flex items-center gap-10">
-          <nav className="flex gap-8 text-lg font-medium">
+        <div className="hidden xl:flex items-center gap-6 rounded-full border border-white/10 bg-white/[0.04] px-3 py-2 backdrop-blur-md">
+          <nav className="flex gap-2 text-sm font-medium text-white/85">
             {["Home", "Work", "Profile", "Contact"].map((item) => (
               <Link
                 key={item}
                 href={item === "Home" ? "/" : `/${item.toLowerCase()}`}
-                className="relative group"
+                className="rounded-full px-4 py-2 transition-all duration-300 hover:bg-white/8 hover:text-white"
               >
-                <span className="text-white group-hover:text-accent transition-colors">
-                  {item}
-                </span>
-                <span className="absolute left-0 -bottom-1 w-0 h-[2px] bg-accent transition-all group-hover:w-full" />
+                {item}
               </Link>
             ))}
           </nav>
 
           <a href={hireMeLink} target="_blank" rel="noopener noreferrer">
-            <Button className="xl:mr-6 mr-0 bg-accent text-accent-foreground font-semibold px-6 py-2 rounded-full shadow-[0_0_16px_rgba(99,102,241,0.35)] hover:shadow-[0_0_26px_rgba(99,102,241,0.45)] hover:scale-105 transition-all">
+            <Button className="mr-0 rounded-full bg-accent px-6 py-2 font-semibold text-accent-foreground shadow-[0_10px_35px_rgba(124,108,255,0.28)] transition-all hover:-translate-y-0.5 hover:bg-accent-hover hover:shadow-[0_14px_40px_rgba(124,108,255,0.36)]">
               Hire me
             </Button>
           </a>
-
         </div>
 
-        {/* MOBILE NAV */}
         <div className="xl:hidden">
           <MobileNav />
         </div>

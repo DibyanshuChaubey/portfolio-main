@@ -165,13 +165,25 @@ const ResumePage = () => {
     <motion.div
       initial={{ opacity: 0 }}
       animate={{ opacity: 1, transition: { duration: 0.4, delay: 0.4, ease: "easeIn" } }}
-      className="min-h-[80vh] flex items-center justify-center py-12 xl:py-0"
+      className="min-h-[80vh] py-8 xl:py-12"
     >
       <div className="container mx-auto">
-        <Tabs defaultValue="experience" className="flex flex-col xl:flex-row gap-[60px]">
+        <div className="mb-10 xl:mb-14 flex max-w-3xl flex-col gap-4">
+          <span className="inline-flex w-fit rounded-full border border-white/15 bg-white/[0.04] px-4 py-2 text-sm text-white/75">
+            Profile Snapshot
+          </span>
+          <h1 className="text-4xl font-bold tracking-tight text-white xl:text-6xl">
+            Experience, skills, and achievements in one structured view.
+          </h1>
+          <p className="max-w-2xl text-white/65 xl:text-lg">
+            A compact professional profile covering education, project work,
+            technical depth, competitive programming, and certifications.
+          </p>
+        </div>
+
+        <Tabs defaultValue="experience" className="flex flex-col xl:flex-row gap-8 xl:gap-[48px]">
           
-          {/* Sidebar Tabs */}
-          <TabsList className="flex flex-col w-full max-w-[280px] mx-auto xl:mx-0 gap-4">
+          <TabsList className="grid w-full grid-cols-2 gap-3 rounded-[28px] border border-white/10 bg-white/[0.04] p-3 xl:flex xl:h-fit xl:max-w-[290px] xl:grid-cols-1 xl:flex-col">
             <TabsTrigger value="experience">Experience</TabsTrigger>
             <TabsTrigger value="education">Education</TabsTrigger>
             <TabsTrigger value="skills">Skills</TabsTrigger>
@@ -181,10 +193,8 @@ const ResumePage = () => {
             <TabsTrigger value="about">About me</TabsTrigger>
           </TabsList>
 
-          {/* Content */}
-          <div className="min-h-[70vh] w-full">
+          <div className="min-h-[70vh] w-full rounded-[32px] border border-white/10 bg-white/[0.04] p-6 backdrop-blur-md xl:p-8">
             
-            {/* Experience */}
             <TabsContent value="experience">
               <Section title={experience.title} desc={experience.desc}>
                 <ScrollArea className="max-h-[400px]">
@@ -197,7 +207,6 @@ const ResumePage = () => {
               </Section>
             </TabsContent>
 
-            {/* Education */}
             <TabsContent value="education">
               <Section title={education.title} desc={education.desc}>
                 <ScrollArea className="max-h-[400px]">
@@ -210,7 +219,6 @@ const ResumePage = () => {
               </Section>
             </TabsContent>
 
-                      {/* Skills */}
             <TabsContent value="skills">
               <Section title={skills.title} desc={skills.desc}>
                 <ScrollArea className="max-h-[500px] pr-2">
@@ -218,7 +226,7 @@ const ResumePage = () => {
                     {skills.skilllist.map((skill, i) => (
                       <TooltipProvider key={i} delayDuration={100}>
                         <Tooltip>
-                          <TooltipTrigger className="w-full min-h-[140px] rounded-xl bg-white/[0.04] border border-white/10 hover:border-accent/50 hover:bg-white/[0.08] transition-all duration-300 p-4 flex flex-col items-center justify-center gap-3 group">
+                          <TooltipTrigger className="group flex min-h-[140px] w-full flex-col items-center justify-center gap-3 rounded-[24px] border border-white/10 bg-white/[0.03] p-4 transition-all duration-300 hover:-translate-y-1 hover:border-accent/50 hover:bg-white/[0.06]">
                             <div className="text-4xl sm:text-5xl text-white/90 group-hover:text-accent transition-colors duration-300">
                               {skill.icon}
                             </div>
@@ -237,13 +245,12 @@ const ResumePage = () => {
               </Section>
             </TabsContent>
 
-            {/* CP & DSA */}
             <TabsContent value="cpdsa">
               <Section title={cpAndDsa.title} desc={cpAndDsa.desc}>
                 <ScrollArea className="max-h-[460px]">
                   <ul className="grid grid-cols-1 lg:grid-cols-2 gap-[30px]">
                     {cpAndDsa.achievements.map((item, i) => (
-                      <li key={i} className="bg-white/5 border border-white/10 min-h-[180px] py-6 px-10 rounded-xl flex flex-col justify-center gap-2">
+                      <li key={i} className="flex min-h-[180px] flex-col justify-center gap-2 rounded-[28px] border border-white/10 bg-white/[0.04] px-10 py-6">
                         <a href={item.link} target="_blank" className="text-accent text-2xl underline">
                           {item.platform}
                         </a>
@@ -255,7 +262,6 @@ const ResumePage = () => {
               </Section>
             </TabsContent>
 
-            {/* Other Achievements */}
             <TabsContent value="other">
               <Section title={otherAchievements.title} desc={otherAchievements.desc}>
                 <ScrollArea className="max-h-[460px]">
@@ -268,7 +274,6 @@ const ResumePage = () => {
               </Section>
             </TabsContent>
 
-            {/* Certifications */}
             <TabsContent value="certifications">
               <Section title={certifications.title} desc={certifications.desc}>
                 <ScrollArea className="max-h-[460px]">
@@ -276,7 +281,7 @@ const ResumePage = () => {
                     {certifications.items.map((item, i) => (
                       <li
                         key={i}
-                        className="bg-white/5 border border-white/10 min-h-[180px] py-6 px-10 rounded-xl flex flex-col justify-center gap-2"
+                        className="flex min-h-[180px] flex-col justify-center gap-2 rounded-[28px] border border-white/10 bg-white/[0.04] px-10 py-6"
                       >
                         <h3 className="text-xl">{item.name}</h3>
                         <p className="text-white/60">{item.issuer}</p>
@@ -296,14 +301,13 @@ const ResumePage = () => {
               </Section>
             </TabsContent>
 
-           {/* About Me */}
             <TabsContent value="about">
               <Section title={about.title} desc={about.desc}>
                 <ul className="grid grid-cols-1 md:grid-cols-2 gap-4 max-w-4xl mx-auto xl:mx-0">
                   {about.info.map((item, i) => (
                     <li
                       key={i}
-                      className="bg-white/[0.04] border border-white/10 hover:border-accent/40 rounded-xl px-4 py-4 transition-colors duration-300"
+                      className="rounded-[24px] border border-white/10 bg-white/[0.03] px-4 py-4 transition-colors duration-300 hover:border-accent/40"
                     >
                       <p className="text-xs uppercase tracking-wider text-white/50 mb-1">
                         {item.fieldName}
@@ -336,14 +340,14 @@ const ResumePage = () => {
 // ------------------- REUSABLE SUBCOMPONENTS -------------------
 const Section = ({ title, desc, children }) => (
   <div className="flex flex-col gap-[30px] text-center xl:text-left">
-    <h3 className="text-4xl font-bold">{title}</h3>
+    <h3 className="text-3xl font-bold xl:text-4xl">{title}</h3>
     <p className="max-w-[600px] text-white/60 mx-auto xl:mx-0">{desc}</p>
     {children}
   </div>
 );
 
 const Card = ({ duration, title, subtitle, extra }) => (
-  <li className="bg-white/5 border border-white/10 min-h-[180px] py-6 px-10 rounded-xl flex flex-col justify-center gap-2">
+  <li className="flex min-h-[180px] flex-col justify-center gap-2 rounded-[28px] border border-white/10 bg-white/[0.04] px-10 py-6">
     {duration && <span className="text-accent">{duration}</span>}
     <h3 className="text-xl">{title}</h3>
     {subtitle && <p className="text-white/60">{subtitle}</p>}

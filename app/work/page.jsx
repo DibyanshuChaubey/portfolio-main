@@ -114,8 +114,6 @@ const WorkPage = () => {
     setProject(projects[swiper.activeIndex]);
   };
 
-  const primaryProjectUrl = project.live || project.github;
-
   return (
     <motion.div
       initial={{ opacity: 0 }}
@@ -123,16 +121,31 @@ const WorkPage = () => {
         opacity: 1,
         transition: { delay: 0.4, duration: 0.4, ease: "easeIn" },
       }}
-      className="min-h-[80vh] flex flex-col justify-center py-12 xl:px-0"
+      className="min-h-[80vh] py-8 xl:py-12"
     >
       <div className="container mx-auto">
+        <div className="mb-10 xl:mb-14 flex max-w-3xl flex-col gap-4">
+          <span className="inline-flex w-fit rounded-full border border-white/15 bg-white/[0.04] px-4 py-2 text-sm text-white/75">
+            Selected Work
+          </span>
+          <h1 className="text-4xl font-bold tracking-tight text-white xl:text-6xl">
+            Deployed projects with product thinking and production focus.
+          </h1>
+          <p className="max-w-2xl text-white/65 xl:text-lg">
+            A curated view of full-stack builds across operations, community,
+            and productivity, each designed around clear workflows and real user
+            outcomes.
+          </p>
+        </div>
+
         <div className="xl:hidden space-y-6">
           {projects.map((mobileProject) => (
             <article
               key={mobileProject.num}
-              className="rounded-xl border border-white/10 bg-white/5 overflow-hidden"
+              className="overflow-hidden rounded-[28px] border border-white/10 bg-white/[0.05] shadow-[0_18px_60px_rgba(0,0,0,0.16)] backdrop-blur-md"
             >
               <div className="relative h-[220px] w-full">
+                <div className="absolute inset-0 z-10 bg-gradient-to-t from-background via-transparent to-transparent" />
                 <Image
                   src={mobileProject.image}
                   alt={mobileProject.title}
@@ -141,14 +154,16 @@ const WorkPage = () => {
                 />
               </div>
 
-              <div className="p-5 space-y-4">
-                <p className="text-4xl leading-none font-extrabold text-transparent text-outline">
+              <div className="space-y-4 p-5 xl:p-6">
+                <p className="text-4xl font-extrabold leading-none text-transparent text-outline">
                   {mobileProject.num}
                 </p>
                 <h2 className="text-2xl font-bold leading-tight text-white">
                   {mobileProject.title}
                 </h2>
-                <p className="text-accent">{mobileProject.category}</p>
+                <p className="text-sm font-medium uppercase tracking-[0.18em] text-accent/90">
+                  {mobileProject.category}
+                </p>
                 <p className="text-white/70">{mobileProject.description}</p>
 
                 <ul className="list-disc pl-5 space-y-1 text-white/70 text-sm">
@@ -174,7 +189,7 @@ const WorkPage = () => {
                       href={mobileProject.live}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="inline-flex items-center gap-2 rounded-full border border-accent/40 bg-accent/10 px-4 py-2 text-sm font-medium text-accent"
+                      className="inline-flex items-center gap-2 rounded-full border border-accent/40 bg-accent/10 px-4 py-2 text-sm font-medium text-accent transition-colors hover:bg-accent hover:text-primary"
                     >
                       <BsArrowUpRight className="text-base" />
                       Live Project
@@ -185,7 +200,7 @@ const WorkPage = () => {
                       href={mobileProject.github}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/5 px-4 py-2 text-sm text-white"
+                      className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/5 px-4 py-2 text-sm text-white transition-colors hover:border-accent hover:text-accent"
                     >
                       <BsGithub className="text-base" />
                       GitHub
@@ -197,26 +212,30 @@ const WorkPage = () => {
           ))}
         </div>
 
-        <div className="hidden xl:flex xl:flex-row xl:gap-[30px]">
-          {/* Project details */}
-          <div className="w-full xl:w-[50%] xl:h-[460px] flex flex-col xl:justify-between order-2 xl:order-none">
-            <div className="flex flex-col gap-[30px] h-[50%]">
+        <div className="hidden xl:flex xl:flex-row xl:gap-8">
+          <div className="order-2 flex w-full flex-col xl:order-none xl:w-[48%]">
+            <div className="flex h-full flex-col gap-7 rounded-[32px] border border-white/10 bg-white/[0.04] p-8 backdrop-blur-md">
               <div className="text-8xl leading-none font-extrabold text-transparent text-outline">
                 {project.num}
               </div>
               <h2 className="text-[42px] font-bold leading-none text-white capitalize">
                 {project.title}
               </h2>
-              <p className="text-accent text-lg">{project.category}</p>
+              <p className="text-sm font-medium uppercase tracking-[0.22em] text-accent/90">
+                {project.category}
+              </p>
               <p className="text-white/60">{project.description}</p>
               <ul className="list-disc pl-5 space-y-2 text-white/70">
                 {project.highlights.map((point, index) => (
                   <li key={index}>{point}</li>
                 ))}
               </ul>
-              <ul className="grid grid-cols-1 xl:grid-cols-3 gap-4">
+              <ul className="flex flex-wrap gap-3">
                 {project.stack.map((stack, index) => (
-                  <li key={index} className="text-xl text-accent">
+                  <li
+                    key={index}
+                    className="rounded-full border border-white/10 bg-white/[0.03] px-3 py-1.5 text-sm text-accent"
+                  >
                     {stack.name}
                   </li>
                 ))}
@@ -248,22 +267,10 @@ const WorkPage = () => {
                   </a>
                 )}
               </div>
-              {primaryProjectUrl && (
-                <a
-                  href={primaryProjectUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex w-fit items-center gap-2 rounded-full border border-accent/40 bg-accent/10 px-4 py-2 text-sm font-medium text-accent transition-colors hover:bg-accent hover:text-primary xl:hidden"
-                >
-                  <BsArrowUpRight className="text-base" />
-                  Open live project
-                </a>
-              )}
             </div>
           </div>
 
-          {/* Project slider */}
-          <div className="w-full xl:w-[50%]">
+          <div className="w-full xl:w-[52%]">
             <Swiper
               spaceBetween={30}
               slidesPerView={1}
@@ -272,8 +279,8 @@ const WorkPage = () => {
             >
               {projects.map((project, index) => (
                 <SwiperSlide key={index} className="w-full">
-                  <div className="h-[460px] relative group flex justify-center items-center bg-white/5 rounded-xl border border-white/10 overflow-hidden">
-                    <div className="absolute top-0 bottom-0 w-full h-full bg-black/10 z-10 pointer-events-none"></div>
+                  <div className="relative flex h-[520px] items-center justify-center overflow-hidden rounded-[32px] border border-white/10 bg-white/[0.04] shadow-[0_20px_60px_rgba(0,0,0,0.14)]">
+                    <div className="pointer-events-none absolute inset-0 z-10 bg-gradient-to-t from-background/65 via-transparent to-transparent"></div>
                     <div className="relative w-full h-full">
                       {project.live ? (
                         <a
@@ -287,7 +294,7 @@ const WorkPage = () => {
                             src={project.image}
                             alt={project.title}
                             fill
-                            className="object-cover rounded-xl"
+                            className="rounded-[32px] object-cover"
                           />
                           <div className="absolute inset-x-4 bottom-4 z-20 rounded-full bg-black/70 px-4 py-3 text-center text-sm font-medium text-white backdrop-blur-sm xl:hidden">
                             Tap to open live project
@@ -298,7 +305,7 @@ const WorkPage = () => {
                           src={project.image}
                           alt={project.title}
                           fill
-                          className="object-cover rounded-xl"
+                          className="rounded-[32px] object-cover"
                         />
                       )}
                     </div>

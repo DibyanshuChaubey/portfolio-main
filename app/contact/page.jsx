@@ -200,21 +200,34 @@ const Contact = () => {
               },
             }
       }
-      className="py-6 xl:py-10"
+      className="py-8 xl:py-12"
       aria-labelledby="contact-heading"
     >
       <div className="container mx-auto">
-        <div className="flex flex-col gap-8 xl:flex-row xl:gap-[30px]">
-          <div className="order-2 xl:order-none xl:w-[54%]">
+        <div className="mb-10 xl:mb-14 flex max-w-3xl flex-col gap-4">
+          <span className="inline-flex w-fit rounded-full border border-white/15 bg-white/[0.04] px-4 py-2 text-sm text-white/75">
+            Contact
+          </span>
+          <h1 className="text-4xl font-bold tracking-tight text-white xl:text-6xl">
+            Let&apos;s turn ideas into polished digital products.
+          </h1>
+          <p className="max-w-2xl text-white/65 xl:text-lg">
+            Open to freelance work, backend-heavy builds, and product-focused
+            collaborations where clarity and execution matter.
+          </p>
+        </div>
+
+        <div className="flex flex-col gap-8 xl:flex-row xl:items-start xl:gap-8">
+          <div className="order-2 xl:order-none xl:w-[58%]">
             <form
               onSubmit={handleSubmit}
               noValidate
-              className="flex flex-col gap-6 rounded-xl bg-white/5 p-8 md:p-10"
+              className="flex flex-col gap-6 rounded-[32px] border border-white/10 bg-white/[0.05] p-8 shadow-[0_18px_60px_rgba(0,0,0,0.14)] backdrop-blur-md md:p-10"
             >
               <div className="space-y-3">
-                <h1 id="contact-heading" className="text-4xl text-accent">
+                <h2 id="contact-heading" className="text-3xl font-bold text-white xl:text-4xl">
                   Let&apos;s work together
-                </h1>
+                </h2>
                 <p id="contact-description" className="text-white/60">
                   Feel free to reach out for collaborations, freelance projects,
                   or exciting opportunities. I&apos;m always open to meaningful
@@ -400,15 +413,29 @@ const Contact = () => {
             </form>
           </div>
 
-          <div className="order-1 mb-8 flex flex-1 items-center xl:order-none xl:mb-0 xl:justify-end">
-            <address className="not-italic">
-              <ul className="flex flex-col gap-10">
+          <div className="order-1 mb-8 flex flex-1 items-start xl:order-none xl:mb-0 xl:justify-end">
+            <div className="w-full max-w-[420px] space-y-6">
+              <div className="rounded-[32px] border border-white/10 bg-white/[0.05] p-7 backdrop-blur-md">
+                <p className="mb-2 text-sm uppercase tracking-[0.2em] text-accent/90">
+                  Availability
+                </p>
+                <h3 className="text-2xl font-semibold text-white">
+                  Freelance, product collaboration, and backend-heavy roles.
+                </h3>
+                <p className="mt-3 text-white/60">
+                  Best for discussions around Flask APIs, full-stack products,
+                  database-backed systems, and workflow-driven platforms.
+                </p>
+              </div>
+
+              <address className="not-italic rounded-[32px] border border-white/10 bg-white/[0.04] p-7 backdrop-blur-md">
+              <ul className="flex flex-col gap-8">
                 {contactInfo.map((item) => {
                   const Icon = item.icon;
 
                   return (
                     <li key={item.title} className="flex items-center gap-6">
-                      <div className="flex h-[52px] w-[52px] items-center justify-center rounded-md bg-white/5 text-accent xl:h-[72px] xl:w-[72px]">
+                      <div className="flex h-[52px] w-[52px] items-center justify-center rounded-2xl border border-white/10 bg-white/[0.05] text-accent xl:h-[72px] xl:w-[72px]">
                         <div className="text-[28px]" aria-hidden="true">
                           <Icon />
                         </div>
@@ -431,6 +458,7 @@ const Contact = () => {
                 })}
               </ul>
             </address>
+            </div>
           </div>
         </div>
       </div>
