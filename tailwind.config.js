@@ -25,10 +25,10 @@ module.exports = {
         primary: "var(--font-geist-mono)",
       },
       colors:{
-        primary: "#1d2742",
+        primary: "#202a45",
         accent:{
-          DEFAULT: "#6366f1",
-          hover: "#4f46e5",
+          DEFAULT: "#7c6cff",
+          hover: "#6656f5",
         },
       }
     },
