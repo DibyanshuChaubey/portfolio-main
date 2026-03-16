@@ -7,27 +7,27 @@ const highlightTags = [
   {
     label: "Full Stack",
     className:
-      "right-[6%] top-[14%] xl:right-[8%] xl:top-[16%]",
+      "top-[21%] right-[9%] xl:top-[22%] xl:right-[10%]",
   },
   {
     label: "Flask APIs",
     className:
-      "left-[2%] top-[24%] xl:left-[4%] xl:top-[28%]",
+      "top-[31%] left-[6%] xl:top-[32%] xl:left-[7%]",
   },
   {
     label: "React UI",
     className:
-      "right-[2%] bottom-[24%] xl:right-[4%] xl:bottom-[28%]",
+      "top-[62%] right-[4%] xl:top-[61%] xl:right-[5%]",
   },
   {
     label: "DSA Focused",
     className:
-      "left-[8%] bottom-[12%] xl:left-[10%] xl:bottom-[16%]",
+      "bottom-[16%] left-[12%] xl:bottom-[17%] xl:left-[12%]",
   },
   {
     label: "Data Analyst",
     className:
-      "right-[14%] top-[4%] xl:right-[16%] xl:top-[8%]",
+      "top-[8%] left-1/2 -translate-x-1/2 xl:top-[10%]",
   },
 ];
 
@@ -85,7 +85,7 @@ const Photo = () => {
           <motion.div
             animate={shouldReduceMotion ? undefined : { y: [0, -7, 0] }}
             transition={{ duration: 5.8, repeat: Infinity, ease: "easeInOut" }}
-            className="relative h-full w-full translate-y-[8px] scale-[0.96] xl:translate-y-[12px] xl:scale-[0.95]"
+            className="relative h-full w-full -translate-y-[12px] scale-[1.08] xl:-translate-y-[18px] xl:scale-[1.1]"
           >
             <Image
               src="/assets/new_img-removebg-preview.png"
@@ -93,7 +93,7 @@ const Photo = () => {
               priority
               quality={100}
               fill
-              className="object-contain object-bottom"
+              className="object-contain object-center"
             />
           </motion.div>
         </motion.div>
@@ -138,7 +138,7 @@ const Photo = () => {
           <motion.div
             key={tag.label}
             aria-hidden="true"
-            className={`absolute z-30 hidden rounded-full border border-white/12 bg-white/[0.05] px-3 py-1.5 text-[10px] uppercase tracking-[0.22em] text-white/70 backdrop-blur-md md:block ${tag.className}`}
+            className={`absolute z-30 hidden min-w-[132px] rounded-full border border-white/12 bg-white/[0.05] px-4 py-2 text-center text-[10px] uppercase tracking-[0.22em] text-white/70 backdrop-blur-md md:block xl:min-w-[148px] ${tag.className}`}
             animate={
               shouldReduceMotion ? undefined : { y: [0, -6, 0] }
             }
