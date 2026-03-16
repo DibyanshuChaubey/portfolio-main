@@ -134,9 +134,7 @@ const Home = () => {
             transition={{ delay: 0.35, duration: 0.6 }}
             className="order-1 xl:order-none w-full xl:w-[44%]"
           >
-            <div className="relative rounded-[28px] border border-white/10 bg-gradient-to-b from-white/[0.08] to-white/[0.02] p-4 backdrop-blur-sm">
-              <Photo />
-            </div>
+            <Photo />
           </motion.div>
         </div>
       </div>

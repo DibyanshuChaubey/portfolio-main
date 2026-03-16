@@ -3,33 +3,6 @@
 import { motion, useReducedMotion } from "framer-motion";
 import Image from "next/image";
 
-const highlightTags = [
-  {
-    label: "Data Analyst",
-    className:
-      "top-[52%] left-1/2 -translate-x-1/2 -translate-y-1/2 xl:top-[52%]",
-  },
-  {
-    label: "Full Stack",
-    className:
-      "top-[50%] right-[6%] -translate-y-1/2 xl:top-[50%] xl:right-[7%]",
-  },
-  {
-    label: "Flask APIs",
-    className:
-      "top-[50%] left-[6%] -translate-y-1/2 xl:top-[50%] xl:left-[7%]",
-  },
-  {
-    label: "React UI",
-    className:
-      "bottom-[26%] right-[8%] xl:bottom-[28%] xl:right-[9%]",
-  },
-  {
-    label: "DSA Focused",
-    className:
-      "bottom-[26%] left-[8%] xl:bottom-[28%] xl:left-[9%]",
-  },
-];
 
 const Photo = () => {
   const shouldReduceMotion = useReducedMotion();
@@ -59,7 +32,7 @@ const Photo = () => {
           }
           transition={{ duration: 7, repeat: Infinity, ease: "easeInOut" }}
         />
-        <div className="absolute h-[300px] w-[300px] rounded-full border border-white/8 bg-white/[0.02] backdrop-blur-[2px] xl:h-[500px] xl:w-[500px]" />
+        <div className="absolute h-[300px] w-[300px] rounded-full border border-white/8 xl:h-[500px] xl:w-[500px]" />
         <div className="absolute h-[276px] w-[276px] rounded-full border border-white/10 xl:h-[458px] xl:w-[458px]" />
         <motion.div
           aria-hidden="true"
@@ -85,7 +58,7 @@ const Photo = () => {
           <motion.div
             animate={shouldReduceMotion ? undefined : { y: [0, -7, 0] }}
             transition={{ duration: 5.8, repeat: Infinity, ease: "easeInOut" }}
-            className="relative h-full w-full scale-[1.02] xl:scale-[1.04]"
+            className="relative h-full w-full scale-[0.98] xl:scale-[1.02]"
           >
             <Image
               src="/assets/new_img-removebg-preview.png"
@@ -93,7 +66,7 @@ const Photo = () => {
               priority
               quality={100}
               fill
-              className="object-contain object-center"
+              className="object-cover object-center"
             />
           </motion.div>
         </motion.div>
@@ -134,24 +107,7 @@ const Photo = () => {
           />
         </motion.svg>
 
-        {highlightTags.map((tag, index) => (
-          <motion.div
-            key={tag.label}
-            aria-hidden="true"
-            className={`absolute z-30 hidden min-w-[104px] rounded-full border border-white/12 bg-white/[0.05] px-3 py-1.5 text-center text-[8px] uppercase tracking-[0.2em] text-white/70 backdrop-blur-md md:block xl:min-w-[118px] ${tag.className}`}
-            animate={
-              shouldReduceMotion ? undefined : { y: [0, -6, 0] }
-            }
-            transition={{
-              duration: 4.8 + index * 0.6,
-              repeat: Infinity,
-              ease: "easeInOut",
-              delay: index * 0.2,
-            }}
-          >
-            {tag.label}
-          </motion.div>
-        ))}
+
       </motion.div>
     </div>
   );
