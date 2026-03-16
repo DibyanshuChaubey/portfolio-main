@@ -36,7 +36,6 @@ const about = {
   info: [
     { fieldName: "Name", fieldValue: "Dibyanshu Chaubey" },
     { fieldName: "Email", fieldValue: "dibyanshuchaubey95@gmail.com" },
-    { fieldName: "Phone", fieldValue: "+91 8433353722" },
     { fieldName: "Location", fieldValue: "Kanpur, Uttar Pradesh, India" },
     { fieldName: "Nationality", fieldValue: "Indian" },
     { fieldName: "Freelance", fieldValue: "Available" },
