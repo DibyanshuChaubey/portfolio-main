@@ -44,17 +44,18 @@ const about = {
   ],
 };
 
+
 const experience = {
   title: "My Experience",
   desc: "Project-based hands-on experience building and deploying backend and full-stack applications.",
   items: [
     {
-      company: "Personal Project",
+      company: "Major Project",
       position: "WeAssist Intelligent Hostel Management Platform",
       duration: "2025",
     },
     {
-      company: "Personal Project",
+      company: "Major Project",
       position: "Smart Restaurant Management System",
       duration: "2025",
     },
@@ -210,21 +211,24 @@ const ResumePage = () => {
               </Section>
             </TabsContent>
 
-            {/* Skills */}
+                      {/* Skills */}
             <TabsContent value="skills">
               <Section title={skills.title} desc={skills.desc}>
-                <ScrollArea className="max-h-[460px]">
-                  <ul className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 xl:gap-[30px]">
+                <ScrollArea className="max-h-[500px] pr-2">
+                  <ul className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4">
                     {skills.skilllist.map((skill, i) => (
                       <TooltipProvider key={i} delayDuration={100}>
                         <Tooltip>
-                          <TooltipTrigger className="w-full h-[150px] bg-white/5 border border-white/10 rounded-xl flex justify-center items-center group">
-                            <div className="text-6xl group-hover:text-accent transition-all duration-300">
+                          <TooltipTrigger className="w-full min-h-[140px] rounded-xl bg-white/[0.04] border border-white/10 hover:border-accent/50 hover:bg-white/[0.08] transition-all duration-300 p-4 flex flex-col items-center justify-center gap-3 group">
+                            <div className="text-4xl sm:text-5xl text-white/90 group-hover:text-accent transition-colors duration-300">
                               {skill.icon}
                             </div>
+                            <p className="text-sm text-white/80 group-hover:text-white text-center leading-tight">
+                              {skill.name}
+                            </p>
                           </TooltipTrigger>
                           <TooltipContent>
-                            <p className="capitalize">{skill.name}</p>
+                            <p>{skill.name}</p>
                           </TooltipContent>
                         </Tooltip>
                       </TooltipProvider>
@@ -293,14 +297,38 @@ const ResumePage = () => {
               </Section>
             </TabsContent>
 
-            {/* About Me */}
+           {/* About Me */}
             <TabsContent value="about">
               <Section title={about.title} desc={about.desc}>
-                <ul className="grid grid-cols-1 xl:grid-cols-2 gap-y-6 max-w-[620px] mx-auto xl:mx-0">
+                <ul className="grid grid-cols-1 md:grid-cols-2 gap-4 max-w-4xl mx-auto xl:mx-0">
                   {about.info.map((item, i) => (
-                    <li key={i} className="flex justify-between gap-4 bg-white/5 border border-white/10 px-4 py-3 rounded-md">
-                      <span className="text-white/60">{item.fieldName}</span>
-                      <span className="text-xl">{item.fieldValue}</span>
+                    <li
+                      key={i}
+                      className="bg-white/[0.04] border border-white/10 hover:border-accent/40 rounded-xl px-4 py-4 transition-colors duration-300"
+                    >
+                      <p className="text-xs uppercase tracking-wider text-white/50 mb-1">
+                        {item.fieldName}
+                      </p>
+
+                      {item.fieldName === "Email" ? (
+                        <a
+                          href={`mailto:${item.fieldValue}`}
+                          className="text-base sm:text-lg font-medium break-all hover:text-accent transition-colors"
+                        >
+                          {item.fieldValue}
+                        </a>
+                      ) : item.fieldName === "Phone" ? (
+                        <a
+                          href={`tel:${item.fieldValue.replace(/\s+/g, "")}`}
+                          className="text-base sm:text-lg font-medium hover:text-accent transition-colors"
+                        >
+                          {item.fieldValue}
+                        </a>
+                      ) : (
+                        <p className="text-base sm:text-lg font-medium break-words">
+                          {item.fieldValue}
+                        </p>
+                      )}
                     </li>
                   ))}
                 </ul>
