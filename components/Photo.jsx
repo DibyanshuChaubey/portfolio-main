@@ -7,27 +7,27 @@ const highlightTags = [
   {
     label: "Data Analyst",
     className:
-      "top-[2%] left-1/2 -translate-x-1/2 xl:top-[4%]",
+      "top-[52%] left-1/2 -translate-x-1/2 -translate-y-1/2 xl:top-[52%]",
   },
   {
     label: "Full Stack",
     className:
-      "top-[16%] right-[10%] xl:top-[18%] xl:right-[11%]",
+      "top-[50%] right-[6%] -translate-y-1/2 xl:top-[50%] xl:right-[7%]",
   },
   {
     label: "Flask APIs",
     className:
-      "top-[16%] left-[10%] xl:top-[18%] xl:left-[11%]",
+      "top-[50%] left-[6%] -translate-y-1/2 xl:top-[50%] xl:left-[7%]",
   },
   {
     label: "React UI",
     className:
-      "bottom-[16%] right-[10%] xl:bottom-[18%] xl:right-[11%]",
+      "bottom-[26%] right-[8%] xl:bottom-[28%] xl:right-[9%]",
   },
   {
     label: "DSA Focused",
     className:
-      "bottom-[16%] left-[10%] xl:bottom-[18%] xl:left-[11%]",
+      "bottom-[26%] left-[8%] xl:bottom-[28%] xl:left-[9%]",
   },
 ];
 
@@ -85,7 +85,7 @@ const Photo = () => {
           <motion.div
             animate={shouldReduceMotion ? undefined : { y: [0, -7, 0] }}
             transition={{ duration: 5.8, repeat: Infinity, ease: "easeInOut" }}
-            className="relative h-full w-full scale-[0.96] xl:scale-[0.98]"
+            className="relative h-full w-full scale-[1.02] xl:scale-[1.04]"
           >
             <Image
               src="/assets/new_img-removebg-preview.png"
@@ -138,7 +138,7 @@ const Photo = () => {
           <motion.div
             key={tag.label}
             aria-hidden="true"
-            className={`absolute z-30 hidden min-w-[132px] rounded-full border border-white/12 bg-white/[0.05] px-4 py-2 text-center text-[10px] uppercase tracking-[0.22em] text-white/70 backdrop-blur-md md:block xl:min-w-[148px] ${tag.className}`}
+            className={`absolute z-30 hidden min-w-[104px] rounded-full border border-white/12 bg-white/[0.05] px-3 py-1.5 text-center text-[8px] uppercase tracking-[0.2em] text-white/70 backdrop-blur-md md:block xl:min-w-[118px] ${tag.className}`}
             animate={
               shouldReduceMotion ? undefined : { y: [0, -6, 0] }
             }
