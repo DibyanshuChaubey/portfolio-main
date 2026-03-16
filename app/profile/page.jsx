@@ -316,13 +316,6 @@ const ResumePage = () => {
                         >
                           {item.fieldValue}
                         </a>
-                      ) : item.fieldName === "Phone" ? (
-                        <a
-                          href={`tel:${item.fieldValue.replace(/\s+/g, "")}`}
-                          className="text-base sm:text-lg font-medium hover:text-accent transition-colors"
-                        >
-                          {item.fieldValue}
-                        </a>
                       ) : (
                         <p className="text-base sm:text-lg font-medium break-words">
                           {item.fieldValue}

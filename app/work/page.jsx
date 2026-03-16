@@ -12,7 +12,6 @@ import {
   TooltipProvider,
 } from "@radix-ui/react-tooltip";
 
-import Link from "next/link";
 import Image from "next/image";
 import WorkSliderButtons from "@/components/WorkSliderButtons";
 
@@ -117,6 +116,8 @@ const WorkPage = () => {
     setProject(projects[swiper.activeIndex]);
   };
 
+  const primaryProjectUrl = project.live || project.github;
+
   return (
     <motion.div
       initial={{ opacity: 0 }}
@@ -154,7 +155,12 @@ const WorkPage = () => {
               <div className="border border-white/20"></div>
               <div className="flex items-center gap-4">
                 {project.live && (
-                  <Link href={project.live}>
+                  <a
+                    href={project.live}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label={`Open live project for ${project.title}`}
+                  >
                     <TooltipProvider delayDuration={100}>
                       <Tooltip>
                         <TooltipTrigger className="w-[70px] h-[70px] rounded-full bg-white/5 flex justify-center items-center group">
@@ -165,10 +171,15 @@ const WorkPage = () => {
                         </TooltipContent>
                       </Tooltip>
                     </TooltipProvider>
-                  </Link>
+                  </a>
                 )}
                 {project.github && (
-                  <Link href={project.github}>
+                  <a
+                    href={project.github}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label={`Open GitHub repository for ${project.title}`}
+                  >
                     <TooltipProvider delayDuration={100}>
                       <Tooltip>
                         <TooltipTrigger className="w-[70px] h-[70px] rounded-full bg-white/5 flex justify-center items-center group">
@@ -179,9 +190,20 @@ const WorkPage = () => {
                         </TooltipContent>
                       </Tooltip>
                     </TooltipProvider>
-                  </Link>
+                  </a>
                 )}
               </div>
+              {primaryProjectUrl && (
+                <a
+                  href={primaryProjectUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex w-fit items-center gap-2 rounded-full border border-accent/40 bg-accent/10 px-4 py-2 text-sm font-medium text-accent transition-colors hover:bg-accent hover:text-primary xl:hidden"
+                >
+                  <BsArrowUpRight className="text-base" />
+                  Open live project
+                </a>
+              )}
             </div>
           </div>
 
@@ -195,15 +217,35 @@ const WorkPage = () => {
             >
               {projects.map((project, index) => (
                 <SwiperSlide key={index} className="w-full">
-                  <div className="h-[460px] relative group flex justify-center items-center bg-white/5 rounded-xl border border-white/10">
-                    <div className="absolute top-0 bottom-0 w-full h-full bg-black/10 z-10"></div>
+                  <div className="h-[460px] relative group flex justify-center items-center bg-white/5 rounded-xl border border-white/10 overflow-hidden">
+                    <div className="absolute top-0 bottom-0 w-full h-full bg-black/10 z-10 pointer-events-none"></div>
                     <div className="relative w-full h-full">
-                      <Image
-                        src={project.image}
-                        alt={project.title}
-                        fill
-                        className="object-cover rounded-xl"
-                      />
+                      {project.live ? (
+                        <a
+                          href={project.live}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          aria-label={`Open live project for ${project.title}`}
+                          className="block h-full w-full"
+                        >
+                          <Image
+                            src={project.image}
+                            alt={project.title}
+                            fill
+                            className="object-cover rounded-xl"
+                          />
+                          <div className="absolute inset-x-4 bottom-4 z-20 rounded-full bg-black/70 px-4 py-3 text-center text-sm font-medium text-white backdrop-blur-sm xl:hidden">
+                            Tap to open live project
+                          </div>
+                        </a>
+                      ) : (
+                        <Image
+                          src={project.image}
+                          alt={project.title}
+                          fill
+                          className="object-cover rounded-xl"
+                        />
+                      )}
                     </div>
                   </div>
                 </SwiperSlide>

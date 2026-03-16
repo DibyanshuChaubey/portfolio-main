@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { motion, useReducedMotion } from "framer-motion";
-import { FaEnvelope, FaMapMarkerAlt, FaPhoneAlt } from "react-icons/fa";
+import { FaEnvelope, FaMapMarkerAlt } from "react-icons/fa";
 
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -18,12 +18,6 @@ import {
 import { Textarea } from "@/components/ui/textarea";
 
 const contactInfo = [
-  {
-    icon: FaPhoneAlt,
-    title: "Phone",
-    description: "+91 84333 53722",
-    href: "tel:+918433353722",
-  },
   {
     icon: FaEnvelope,
     title: "Email",
