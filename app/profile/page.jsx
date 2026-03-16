@@ -58,6 +58,16 @@ const experience = {
       position: "Smart Restaurant Management System",
       duration: "2025",
     },
+    {
+      company: "Minor Project",
+      position: "WeCare - Cancer Community Support Platform",
+      duration: "2025",
+    },
+    {
+      company: "Minor Project",
+      position: "MyNote - Personal Notebook Platform",
+      duration: "2025",
+    },
   ],
 };
 

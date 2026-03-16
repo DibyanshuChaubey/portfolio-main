@@ -62,6 +62,52 @@ const projects = [
     live: "https://smart-restaurant-project.onrender.com",
     github: "",
   },
+  {
+    num: "03",
+    category: "Cancer Community Support Platform",
+    title: "WeCare - Cancer Community Support Platform",
+    description:
+      "Full-stack community platform for cancer patients, survivors, and caregivers to connect and support each other.",
+    highlights: [
+      "Built a responsive React frontend using HTML, CSS, and JavaScript.",
+      "Implemented Python backend logic for user interactions and community content.",
+      "Designed core features including user profiles, discussion posts, and support conversations.",
+      "Deployed on Vercel with cloud hosting and continuous delivery.",
+    ],
+    stack: [
+      { name: "React" },
+      { name: "JavaScript" },
+      { name: "Python" },
+      { name: "HTML" },
+      { name: "CSS" },
+    ],
+    image: "/assets/Screenshot 2026-03-16 195049.png",
+    live: "https://vercel.com/dibyanshuchaubeys-projects/we-care",
+    github: "",
+  },
+  {
+    num: "04",
+    category: "Personal Productivity App",
+    title: "MyNote - Personal Notebook Platform",
+    description:
+      "Web-based note-taking app for creating, editing, and managing personal notes with a clean interface.",
+    highlights: [
+      "Developed a dynamic and responsive React frontend for note management.",
+      "Implemented CRUD operations to create, update, and delete notes.",
+      "Integrated Python backend services for processing and storage workflows.",
+      "Deployed on Vercel for scalable cloud hosting.",
+    ],
+    stack: [
+      { name: "React" },
+      { name: "JavaScript" },
+      { name: "Python" },
+      { name: "HTML" },
+      { name: "CSS" },
+    ],
+    image: "/assets/Screenshot 2026-03-16 195016.png",
+    live: "https://mynoteapp-nine.vercel.app/",
+    github: "",
+  },
 ];
 
 const WorkPage = () => {
