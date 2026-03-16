@@ -5,29 +5,29 @@ import Image from "next/image";
 
 const highlightTags = [
   {
+    label: "Data Analyst",
+    className:
+      "top-[2%] left-1/2 -translate-x-1/2 xl:top-[4%]",
+  },
+  {
     label: "Full Stack",
     className:
-      "top-[21%] right-[9%] xl:top-[22%] xl:right-[10%]",
+      "top-[16%] right-[10%] xl:top-[18%] xl:right-[11%]",
   },
   {
     label: "Flask APIs",
     className:
-      "top-[31%] left-[6%] xl:top-[32%] xl:left-[7%]",
+      "top-[16%] left-[10%] xl:top-[18%] xl:left-[11%]",
   },
   {
     label: "React UI",
     className:
-      "top-[62%] right-[4%] xl:top-[61%] xl:right-[5%]",
+      "bottom-[16%] right-[10%] xl:bottom-[18%] xl:right-[11%]",
   },
   {
     label: "DSA Focused",
     className:
-      "bottom-[16%] left-[12%] xl:bottom-[17%] xl:left-[12%]",
-  },
-  {
-    label: "Data Analyst",
-    className:
-      "top-[8%] left-1/2 -translate-x-1/2 xl:top-[10%]",
+      "bottom-[16%] left-[10%] xl:bottom-[18%] xl:left-[11%]",
   },
 ];
 
@@ -85,7 +85,7 @@ const Photo = () => {
           <motion.div
             animate={shouldReduceMotion ? undefined : { y: [0, -7, 0] }}
             transition={{ duration: 5.8, repeat: Infinity, ease: "easeInOut" }}
-            className="relative h-full w-full -translate-y-[12px] scale-[1.08] xl:-translate-y-[18px] xl:scale-[1.1]"
+            className="relative h-full w-full scale-[0.96] xl:scale-[0.98]"
           >
             <Image
               src="/assets/new_img-removebg-preview.png"
