@@ -1,9 +1,7 @@
 "use client";
 import Link from "next/link";
-import { FaGithub, FaLinkedinIn, FaInstagram, FaTwitter } from "react-icons/fa";
+import { FaGithub, FaLinkedinIn } from "react-icons/fa";
 import { SiLeetcode } from "react-icons/si";
-
-
 
 const socials = [
   { icon: <FaGithub />, path: "https://github.com/DibyanshuChaubey" },
@@ -11,14 +9,10 @@ const socials = [
     icon: <FaLinkedinIn />,
     path: "https://www.linkedin.com/in/dibyanshu-chaubey/",
   },
-{
-  icon: <SiLeetcode color="#FFA116" />,
-  path: "https://leetcode.com/u/dibyanshuchaubey/",
-}
-
-
-
-  // {icon: <FaTwitter/>,path:''},
+  {
+    icon: <SiLeetcode color="#FFA116" />,
+    path: "https://leetcode.com/u/dibyanshu_chaubey/",
+  },
 ];
 
 const Social = ({ containerStyles, iconStyles }) => {

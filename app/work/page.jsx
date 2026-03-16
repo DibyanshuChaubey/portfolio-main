@@ -20,7 +20,7 @@ const projects = [
   {
     num: "01",
     category: "Issue Management Platform",
-    title: "WeAssist Hostel Issue Management Platform",
+    title: "WeAssist Intelligent Hostel Management Platform",
     description:
       "Web platform for students to report and track hostel maintenance issues.",
     highlights: [

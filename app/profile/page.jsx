@@ -50,7 +50,7 @@ const experience = {
   items: [
     {
       company: "Personal Project",
-      position: "WeAssist Hostel Issue Management Platform",
+      position: "WeAssist Intelligent Hostel Management Platform",
       duration: "2025",
     },
     {
@@ -108,7 +108,7 @@ const cpAndDsa = {
     {
       platform: "LeetCode",
       achievement: "Solved 125+ problems focused on data structures and algorithms.",
-      link: "https://leetcode.com/u/dibyanshuchaubey/",
+      link: "https://leetcode.com/u/dibyanshu_chaubey/",
     },
   ],
 };
@@ -144,7 +144,7 @@ const certifications = {
       name: "Employability Enhancement Programme",
       issuer: "Centum Foundation (supported by Infosys Foundation)",
       year: "2025",
-      link: "#",
+      link: "https://drive.google.com/file/d/1vwfF6DVUWypFmL9IiDJBbiF8YWhwjTuI/view",
     },
   ],
 };

@@ -7,20 +7,20 @@ const PageTransition = ({ children }) => {
 
   return (
     <AnimatePresence mode="wait">
-      <motion.div key={pathname} className="relative">
-        <motion.div
-          initial={{ opacity: 1 }}
-          animate={{
-            opacity: 0,
-            transition: {
-              delay: 0.6,
-              duration: 0.35,
-              ease: "easeInOut",
-            },
-          }}
-          exit={{ opacity: 1 }}
-          className="h-screen w-screen fixed bg-background top-0 left-0 z-40 pointer-events-none"
-        />
+      <motion.div
+        key={pathname}
+        className="relative"
+        initial={{ opacity: 0, y: 12 }}
+        animate={{
+          opacity: 1,
+          y: 0,
+          transition: {
+            duration: 0.45,
+            ease: [0.16, 1, 0.3, 1],
+          },
+        }}
+        exit={{ opacity: 0, y: 8, transition: { duration: 0.2, ease: "easeInOut" } }}
+      >
         {children}
       </motion.div>
     </AnimatePresence>
