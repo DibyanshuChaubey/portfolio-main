@@ -3,6 +3,34 @@
 import { motion, useReducedMotion } from "framer-motion";
 import Image from "next/image";
 
+const highlightTags = [
+  {
+    label: "Full Stack",
+    className:
+      "right-[6%] top-[14%] xl:right-[8%] xl:top-[16%]",
+  },
+  {
+    label: "Flask APIs",
+    className:
+      "left-[2%] top-[24%] xl:left-[4%] xl:top-[28%]",
+  },
+  {
+    label: "React UI",
+    className:
+      "right-[2%] bottom-[24%] xl:right-[4%] xl:bottom-[28%]",
+  },
+  {
+    label: "DSA Focused",
+    className:
+      "left-[8%] bottom-[12%] xl:left-[10%] xl:bottom-[16%]",
+  },
+  {
+    label: "Data Analyst",
+    className:
+      "right-[14%] top-[4%] xl:right-[16%] xl:top-[8%]",
+  },
+];
+
 const Photo = () => {
   const shouldReduceMotion = useReducedMotion();
 
@@ -57,7 +85,7 @@ const Photo = () => {
           <motion.div
             animate={shouldReduceMotion ? undefined : { y: [0, -7, 0] }}
             transition={{ duration: 5.8, repeat: Infinity, ease: "easeInOut" }}
-            className="relative h-full w-full scale-[1.05] xl:scale-[1.03]"
+            className="relative h-full w-full translate-y-[8px] scale-[0.96] xl:translate-y-[12px] xl:scale-[0.95]"
           >
             <Image
               src="/assets/new_img-removebg-preview.png"
@@ -65,7 +93,7 @@ const Photo = () => {
               priority
               quality={100}
               fill
-              className="object-contain object-[center_18%]"
+              className="object-contain object-bottom"
             />
           </motion.div>
         </motion.div>
@@ -106,14 +134,24 @@ const Photo = () => {
           />
         </motion.svg>
 
-        <motion.div
-          aria-hidden="true"
-          className="absolute right-[6%] top-[14%] z-30 rounded-full border border-white/12 bg-white/[0.05] px-3 py-1.5 text-[10px] uppercase tracking-[0.22em] text-white/65 backdrop-blur-md xl:right-[8%] xl:top-[16%]"
-          animate={shouldReduceMotion ? undefined : { y: [0, -8, 0] }}
-          transition={{ duration: 5.5, repeat: Infinity, ease: "easeInOut" }}
-        >
-          Full Stack
-        </motion.div>
+        {highlightTags.map((tag, index) => (
+          <motion.div
+            key={tag.label}
+            aria-hidden="true"
+            className={`absolute z-30 hidden rounded-full border border-white/12 bg-white/[0.05] px-3 py-1.5 text-[10px] uppercase tracking-[0.22em] text-white/70 backdrop-blur-md md:block ${tag.className}`}
+            animate={
+              shouldReduceMotion ? undefined : { y: [0, -6, 0] }
+            }
+            transition={{
+              duration: 4.8 + index * 0.6,
+              repeat: Infinity,
+              ease: "easeInOut",
+              delay: index * 0.2,
+            }}
+          >
+            {tag.label}
+          </motion.div>
+        ))}
       </motion.div>
     </div>
   );
