@@ -5,13 +5,6 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import { BsArrowUpRight, BsGithub } from "react-icons/bs";
 
-import {
-  Tooltip,
-  TooltipContent,
-  TooltipTrigger,
-  TooltipProvider,
-} from "@radix-ui/react-tooltip";
-
 import Image from "next/image";
 import WorkSliderButtons from "@/components/WorkSliderButtons";
 
@@ -58,7 +51,7 @@ const projects = [
       { name: "React" },
     ],
     image: "/assets/Screenshot 2026-03-11 231131.png",
-    live: "https://smart-restaurant-project.onrender.com",
+    live: "https://smart-resturant-project.onrender.com/",
     github: "",
   },
   {
@@ -153,24 +146,17 @@ const WorkPage = () => {
                 ))}
               </ul>
               <div className="border border-white/20"></div>
-              <div className="flex items-center gap-4">
+              <div className="flex flex-wrap items-center gap-3">
                 {project.live && (
                   <a
                     href={project.live}
                     target="_blank"
                     rel="noopener noreferrer"
                     aria-label={`Open live project for ${project.title}`}
+                    className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/5 px-4 py-2 text-sm text-white transition-colors hover:border-accent hover:text-accent"
                   >
-                    <TooltipProvider delayDuration={100}>
-                      <Tooltip>
-                        <TooltipTrigger className="w-[70px] h-[70px] rounded-full bg-white/5 flex justify-center items-center group">
-                          <BsArrowUpRight className="text-white text-3xl group-hover:text-accent" />
-                        </TooltipTrigger>
-                        <TooltipContent>
-                          <p>Live Project</p>
-                        </TooltipContent>
-                      </Tooltip>
-                    </TooltipProvider>
+                    <BsArrowUpRight className="text-lg" />
+                    Live Project
                   </a>
                 )}
                 {project.github && (
@@ -179,17 +165,10 @@ const WorkPage = () => {
                     target="_blank"
                     rel="noopener noreferrer"
                     aria-label={`Open GitHub repository for ${project.title}`}
+                    className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/5 px-4 py-2 text-sm text-white transition-colors hover:border-accent hover:text-accent"
                   >
-                    <TooltipProvider delayDuration={100}>
-                      <Tooltip>
-                        <TooltipTrigger className="w-[70px] h-[70px] rounded-full bg-white/5 flex justify-center items-center group">
-                          <BsGithub className="text-white text-3xl group-hover:text-accent" />
-                        </TooltipTrigger>
-                        <TooltipContent>
-                          <p>GitHub</p>
-                        </TooltipContent>
-                      </Tooltip>
-                    </TooltipProvider>
+                    <BsGithub className="text-lg" />
+                    GitHub
                   </a>
                 )}
               </div>
