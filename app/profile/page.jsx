@@ -51,7 +51,7 @@ const experience = {
     {
       company: "Major Project",
       position: "WeAssist Intelligent Hostel Management Platform",
-      duration: "2025",
+      duration: "2026",
     },
     {
       company: "Major Project",

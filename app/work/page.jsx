@@ -121,7 +121,78 @@ const WorkPage = () => {
       className="min-h-[80vh] flex flex-col justify-center py-12 xl:px-0"
     >
       <div className="container mx-auto">
-        <div className="flex flex-col xl:flex-row xl:gap-[30px]">
+        <div className="xl:hidden space-y-6">
+          {projects.map((mobileProject) => (
+            <article
+              key={mobileProject.num}
+              className="rounded-xl border border-white/10 bg-white/5 overflow-hidden"
+            >
+              <div className="relative h-[220px] w-full">
+                <Image
+                  src={mobileProject.image}
+                  alt={mobileProject.title}
+                  fill
+                  className="object-cover"
+                />
+              </div>
+
+              <div className="p-5 space-y-4">
+                <p className="text-4xl leading-none font-extrabold text-transparent text-outline">
+                  {mobileProject.num}
+                </p>
+                <h2 className="text-2xl font-bold leading-tight text-white">
+                  {mobileProject.title}
+                </h2>
+                <p className="text-accent">{mobileProject.category}</p>
+                <p className="text-white/70">{mobileProject.description}</p>
+
+                <ul className="list-disc pl-5 space-y-1 text-white/70 text-sm">
+                  {mobileProject.highlights.map((point, index) => (
+                    <li key={index}>{point}</li>
+                  ))}
+                </ul>
+
+                <ul className="flex flex-wrap gap-2">
+                  {mobileProject.stack.map((stack, index) => (
+                    <li
+                      key={index}
+                      className="rounded-full border border-white/15 px-3 py-1 text-xs text-accent"
+                    >
+                      {stack.name}
+                    </li>
+                  ))}
+                </ul>
+
+                <div className="flex flex-wrap items-center gap-3 pt-1">
+                  {mobileProject.live && (
+                    <a
+                      href={mobileProject.live}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-2 rounded-full border border-accent/40 bg-accent/10 px-4 py-2 text-sm font-medium text-accent"
+                    >
+                      <BsArrowUpRight className="text-base" />
+                      Live Project
+                    </a>
+                  )}
+                  {mobileProject.github && (
+                    <a
+                      href={mobileProject.github}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/5 px-4 py-2 text-sm text-white"
+                    >
+                      <BsGithub className="text-base" />
+                      GitHub
+                    </a>
+                  )}
+                </div>
+              </div>
+            </article>
+          ))}
+        </div>
+
+        <div className="hidden xl:flex xl:flex-row xl:gap-[30px]">
           {/* Project details */}
           <div className="w-full xl:w-[50%] xl:h-[460px] flex flex-col xl:justify-between order-2 xl:order-none">
             <div className="flex flex-col gap-[30px] h-[50%]">
