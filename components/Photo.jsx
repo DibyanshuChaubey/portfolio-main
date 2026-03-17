@@ -2,10 +2,24 @@
 
 import { motion, useReducedMotion } from "framer-motion";
 import Image from "next/image";
+import { useEffect, useState } from "react";
 
 
 const Photo = () => {
   const shouldReduceMotion = useReducedMotion();
+  const [isMobileView, setIsMobileView] = useState(false);
+
+  useEffect(() => {
+    const mediaQuery = window.matchMedia("(max-width: 1279px)");
+    const updateMobileState = () => setIsMobileView(mediaQuery.matches);
+
+    updateMobileState();
+    mediaQuery.addEventListener("change", updateMobileState);
+
+    return () => {
+      mediaQuery.removeEventListener("change", updateMobileState);
+    };
+  }, []);
 
   return (
     <div className="relative flex h-full w-full items-center justify-center py-4 xl:py-8">
@@ -56,7 +70,13 @@ const Photo = () => {
           whileHover={shouldReduceMotion ? undefined : { scale: 1.015, y: -4 }}
         >
           <motion.div
-            animate={shouldReduceMotion ? undefined : { y: [0, -2, 0] }}
+            animate={
+              shouldReduceMotion
+                ? undefined
+                : isMobileView
+                  ? { y: [0, -4, 0] }
+                  : { y: [0, 0, 0] }
+            }
             transition={{ duration: 5.8, repeat: Infinity, ease: "easeInOut" }}
             className="relative h-[108%] w-full -bottom-4 scale-[0.98] xl:bottom-0 xl:h-full xl:scale-[1.02]"
           >
