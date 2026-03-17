@@ -129,12 +129,12 @@ const WorkPage = () => {
             Selected Work
           </span>
           <h1 className="text-4xl font-bold tracking-tight text-white xl:text-6xl">
-            Deployed projects with product thinking and production focus.
+            Production-ready products built with clear product thinking.
           </h1>
           <p className="max-w-2xl text-white/65 xl:text-lg">
-            A curated view of full-stack builds across operations, community,
-            and productivity, each designed around clear workflows and real user
-            outcomes.
+            A curated portfolio of full-stack systems across operations,
+            community, and productivity—each designed for reliability,
+            usability, and real user outcomes.
           </p>
         </div>
 

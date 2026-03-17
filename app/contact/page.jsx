@@ -209,11 +209,11 @@ const Contact = () => {
             Contact
           </span>
           <h1 className="text-4xl font-bold tracking-tight text-white xl:text-6xl">
-            Let&apos;s turn ideas into polished digital products.
+            Let&apos;s build high-impact digital products together.
           </h1>
           <p className="max-w-2xl text-white/65 xl:text-lg">
-            Open to freelance work, backend-heavy builds, and product-focused
-            collaborations where clarity and execution matter.
+            Open to freelance engagements and product collaborations where
+            speed, clarity, and execution quality matter.
           </p>
         </div>
 

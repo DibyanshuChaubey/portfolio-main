@@ -173,11 +173,11 @@ const ResumePage = () => {
             Profile Snapshot
           </span>
           <h1 className="text-4xl font-bold tracking-tight text-white xl:text-6xl">
-            Experience, skills, and achievements in one structured view.
+            Professional profile, technical depth, and verified achievements.
           </h1>
           <p className="max-w-2xl text-white/65 xl:text-lg">
-            A compact professional profile covering education, project work,
-            technical depth, competitive programming, and certifications.
+            A focused profile covering education, project execution,
+            competitive programming, certifications, and practical impact.
           </p>
         </div>
 

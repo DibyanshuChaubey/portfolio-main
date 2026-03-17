@@ -141,7 +141,7 @@ export default function ContentGrowthPage() {
       <div className="container mx-auto">
         <div className="mb-10 xl:mb-14 flex max-w-4xl flex-col gap-4">
           <span className="inline-flex w-fit rounded-full border border-white/15 bg-white/[0.04] px-4 py-2 text-sm text-white/75">
-            Dedicated Section
+            Content Growth
           </span>
           <h1 className="text-4xl font-bold tracking-tight text-white xl:text-6xl">
             {contentGrowth.title}
