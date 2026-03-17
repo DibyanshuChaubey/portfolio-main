@@ -44,7 +44,7 @@ const Home = () => {
               transition={{ delay: 0.15, duration: 0.45 }}
               className="inline-flex items-center rounded-full border border-white/20 bg-white/5 px-4 py-2 text-sm tracking-wider text-white/85"
             >
-              Full-Stack Developer • Content Growth Strategist
+              Computer Science Student • Python & Flask Developer
             </motion.span>
 
             <motion.h1
@@ -68,7 +68,7 @@ const Home = () => {
             >
               I&apos;m Dibyanshu Chaubey — I design and build modern web
               applications with <strong>React, Python, Flask, and SQL</strong>,
-              focused on performance, clarity, and measurable impact.
+              focused on performance, clarity, and real-world impact.
             </motion.p>
 
             <motion.div

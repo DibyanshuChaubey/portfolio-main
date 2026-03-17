@@ -31,7 +31,7 @@ import { motion } from "framer-motion";
 
 // ------------------- DATA -------------------
 const about = {
-  title: "About me",
+  title: "About Me",
   desc: "Computer Science student with experience building web applications and REST APIs using Python, Flask, SQL, and React. Strong understanding of Data Structures, DBMS, and Operating Systems with 125+ LeetCode problems solved and multiple deployed projects.",
   info: [
     { fieldName: "Name", fieldValue: "Dibyanshu Chaubey" },
@@ -173,11 +173,11 @@ const ResumePage = () => {
             Profile Snapshot
           </span>
           <h1 className="text-4xl font-bold tracking-tight text-white xl:text-6xl">
-            Professional profile, technical depth, and verified achievements.
+            Professional profile, skills, and verified achievements.
           </h1>
           <p className="max-w-2xl text-white/65 xl:text-lg">
-            A focused profile covering education, project execution,
-            competitive programming, certifications, and practical impact.
+            A concise overview of education, project execution, technical depth,
+            competitive programming, and certifications.
           </p>
         </div>
 
@@ -190,7 +190,7 @@ const ResumePage = () => {
             <TabsTrigger value="cpdsa">CP & DSA</TabsTrigger>
             <TabsTrigger value="other">Other Achievements</TabsTrigger>
             <TabsTrigger value="certifications">Certifications</TabsTrigger>
-            <TabsTrigger value="about">About me</TabsTrigger>
+            <TabsTrigger value="about">About Me</TabsTrigger>
           </TabsList>
 
           <div className="min-h-[70vh] w-full rounded-[32px] border border-white/10 bg-white/[0.04] p-6 backdrop-blur-md xl:p-8">

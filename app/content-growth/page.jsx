@@ -9,7 +9,7 @@ const contentGrowth = {
   roleDesc:
     "Focused on building engaging digital content using analytics, storytelling, and platform trends.",
   overview:
-    "I work on content strategy, short-form video editing, and audience engagement optimization. By analyzing platform trends and viewer behavior, I focus on creating content that increases reach, retention, and community growth.",
+    "I lead content strategy, short-form editing, and audience growth optimization. By analyzing platform trends and viewer behavior, I create content systems that improve reach, retention, and community growth.",
   achievements: [
     "Grew a short-form entertainment channel to 195K+ subscribers.",
     "Generated millions of views through Instagram Reels.",
@@ -60,12 +60,12 @@ const contentGrowth = {
     dashboardImages: [
       {
         src: "/assets/channel_dashboards.jpg",
-        previewLabel: "Top-focused preview",
+        previewLabel: "Top-Focused Preview",
         objectPosition: "50% 10%",
       },
       {
         src: "/assets/channel_dashboards2.jpg",
-        previewLabel: "Middle preview",
+        previewLabel: "Top-Middle Preview",
         objectPosition: "50% 12%",
       },
     ],
@@ -140,9 +140,6 @@ export default function ContentGrowthPage() {
     <div className="min-h-[80vh] py-8 xl:py-12">
       <div className="container mx-auto">
         <div className="mb-10 xl:mb-14 flex max-w-4xl flex-col gap-4">
-          <span className="inline-flex w-fit rounded-full border border-white/15 bg-white/[0.04] px-4 py-2 text-sm text-white/75">
-            Content Growth
-          </span>
           <h1 className="text-4xl font-bold tracking-tight text-white xl:text-6xl">
             {contentGrowth.title}
           </h1>
@@ -317,7 +314,7 @@ export default function ContentGrowthPage() {
                     style={{ objectPosition: activeDashboard.objectPosition }}
                   />
                   <div className="absolute inset-x-3 top-3 rounded-full border border-white/20 bg-black/45 px-3 py-1 text-xs text-white/90 backdrop-blur-sm">
-                    {activeDashboard.previewLabel} • Click to open full snap
+                    {activeDashboard.previewLabel} • Click to Open Full Snapshot
                   </div>
                 </a>
                 <div className="flex items-center justify-between border-t border-white/10 px-4 py-3">
