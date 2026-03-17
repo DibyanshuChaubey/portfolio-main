@@ -79,7 +79,7 @@ const projects = [
       { name: "CSS" },
     ],
     image: "/assets/Screenshot 2026-03-16 195049.png",
-    live: "https://vercel.com/dibyanshuchaubeys-projects/we-care",
+    live: "https://we-care-pink-two.vercel.app/",
     github: "",
   },
   {
