@@ -209,11 +209,11 @@ const Contact = () => {
             Contact
           </span>
           <h1 className="text-4xl font-bold tracking-tight text-white xl:text-6xl">
-            Let&apos;s build reliable digital products together.
+            Let&apos;s Build High-Impact Digital Products Together.
           </h1>
           <p className="max-w-2xl text-white/65 xl:text-lg">
-            Open to freelance projects and product-focused collaborations where
-            clean execution, speed, and quality matter.
+            Open to freelance engagements and product-focused collaborations
+            where execution quality, speed, and ownership matter.
           </p>
         </div>
 
@@ -226,12 +226,12 @@ const Contact = () => {
             >
               <div className="space-y-3">
                 <h2 id="contact-heading" className="text-3xl font-bold text-white xl:text-4xl">
-                  Let&apos;s work together
+                  Let&apos;s Work Together
                 </h2>
                 <p id="contact-description" className="text-white/60">
                   Feel free to reach out for collaborations, freelance projects,
                   or high-impact opportunities. I&apos;m always open to meaningful
-                  work that delivers value.
+                  work that creates measurable value.
                 </p>
               </div>
 

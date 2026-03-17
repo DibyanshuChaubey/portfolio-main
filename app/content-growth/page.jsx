@@ -9,7 +9,7 @@ const contentGrowth = {
   roleDesc:
     "Focused on building engaging digital content using analytics, storytelling, and platform trends.",
   overview:
-    "I lead content strategy, short-form editing, and audience growth optimization. By analyzing platform trends and viewer behavior, I create content systems that improve reach, retention, and community growth.",
+    "I lead content strategy, short-form editing, and audience growth optimization. By combining platform trend analysis with viewer behavior insights, I build content systems that improve reach, retention, and community growth.",
   achievements: [
     "Grew a short-form entertainment channel to 195K+ subscribers.",
     "Generated millions of views through Instagram Reels.",

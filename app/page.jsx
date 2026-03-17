@@ -53,11 +53,11 @@ const Home = () => {
               transition={{ delay: 0.25, duration: 0.55 }}
               className="mt-5 mb-6 text-5xl xl:text-7xl font-extrabold leading-[1.05] titan-one"
             >
-              <span className="block text-white">Building reliable</span>
+              <span className="block text-white">Building production-ready</span>
               <span className="block bg-gradient-to-r from-accent via-violet-300 to-cyan-300 bg-clip-text text-transparent">
                 full-stack products
               </span>
-              <span className="block text-white/95">with clean UX</span>
+              <span className="block text-white/95">with measurable impact</span>
             </motion.h1>
 
             <motion.p
@@ -66,9 +66,9 @@ const Home = () => {
               transition={{ delay: 0.4, duration: 0.5 }}
               className="mx-auto xl:mx-0 max-w-[620px] mb-8 text-white/80 text-base xl:text-lg"
             >
-              I&apos;m Dibyanshu Chaubey — I design and build modern web
-              applications with <strong>React, Python, Flask, and SQL</strong>,
-              focused on performance, clarity, and real-world impact.
+              I&apos;m Dibyanshu Chaubey — I design and develop scalable web
+              applications using <strong>React, Python, Flask, and SQL</strong>,
+              focused on product clarity, performance, and real-world outcomes.
             </motion.p>
 
             <motion.div
