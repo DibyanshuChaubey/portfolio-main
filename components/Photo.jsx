@@ -66,7 +66,7 @@ const Photo = () => {
               priority
               quality={100}
               fill
-              className="object-cover object-[center_58%] xl:object-center"
+              className="object-cover object-[center_63%] xl:object-center"
             />
           </motion.div>
         </motion.div>
