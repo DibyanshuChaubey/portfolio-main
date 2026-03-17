@@ -1,0 +1,13 @@
+<svg width="240" height="240" viewBox="0 0 240 240" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg2" x1="20" y1="20" x2="220" y2="220">
+      <stop offset="0%" stop-color="#2B2F55"/>
+      <stop offset="100%" stop-color="#171A33"/>
+    </linearGradient>
+  </defs>
+  <rect x="10" y="10" width="220" height="220" rx="52" fill="url(#bg2)"/>
+  <circle cx="120" cy="120" r="58" stroke="#8B5CF6" stroke-width="14"/>
+  <circle cx="120" cy="120" r="40" stroke="#C4B5FD" stroke-width="10"/>
+  <circle cx="120" cy="120" r="22" stroke="#FFFFFF" stroke-width="8"/>
+  <text x="120" y="208" text-anchor="middle" fill="#C7D2FE" font-size="16" font-family="Arial, sans-serif">Alight Motion</text>
+</svg>

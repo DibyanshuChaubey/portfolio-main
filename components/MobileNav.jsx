@@ -19,6 +19,10 @@ const links = [
     path: "/profile",
   },
   {
+    name: "content growth",
+    path: "/content-growth",
+  },
+  {
     name: "contact",
     path: "/contact",
   },

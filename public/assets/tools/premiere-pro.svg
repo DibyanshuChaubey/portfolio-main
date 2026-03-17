@@ -1,0 +1,12 @@
+<svg width="240" height="240" viewBox="0 0 240 240" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg3" x1="0" y1="0" x2="240" y2="240">
+      <stop offset="0%" stop-color="#2A0B43"/>
+      <stop offset="100%" stop-color="#12041E"/>
+    </linearGradient>
+  </defs>
+  <rect x="10" y="10" width="220" height="220" rx="52" fill="url(#bg3)"/>
+  <rect x="54" y="54" width="132" height="132" rx="24" fill="#1E0C2F" stroke="#A855F7" stroke-width="6"/>
+  <text x="120" y="136" text-anchor="middle" fill="#C084FC" font-size="54" font-weight="700" font-family="Arial, sans-serif">Pr</text>
+  <text x="120" y="208" text-anchor="middle" fill="#DDD6FE" font-size="16" font-family="Arial, sans-serif">Premiere Pro</text>
+</svg>

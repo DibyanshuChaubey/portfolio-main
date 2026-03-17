@@ -1,50 +1,108 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Dibyanshu Chaubey — Portfolio
 
-## Getting Started
+A modern, production-ready personal portfolio built with Next.js, focused on:
 
-First, run the development server:
+- Full-stack project showcases
+- Professional profile and achievements
+- Dedicated **Content Strategy & Audience Growth** proof page
+- Real collaboration links, dashboard snapshots, and recognition documents
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+---
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Live Sections
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+- `/` — Home introduction, profile photo, social links, and highlights
+- `/work` — Deployed project portfolio with live links
+- `/profile` — Education, skills, certifications, and achievements
+- `/content-growth` — Dedicated growth/creator strategy section with:
+	- Audience growth metrics
+	- Case study
+	- Creative toolkit showcase
+	- Instagram work proof
+	- Dashboard snapshot slider
+	- Collaboration proof links
+	- Letter of appreciation
+- `/contact` — Contact form and Gmail compose-based outreach flow
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+---
 
-## Contact / Hire Me Behavior
+## Tech Stack
 
-This portfolio uses a simple Gmail compose flow (no backend mail delivery).
+- Next.js (App Router)
+- React
+- Tailwind CSS
+- Framer Motion
+- Swiper
+- React Icons
 
-- Clicking `Hire me` opens Gmail compose with your recipient address pre-filled.
-- Submitting the contact form opens Gmail compose with `to`, `subject`, and message body pre-filled from the form.
-- If Gmail web cannot open (popup blocked), it falls back to `mailto:`.
+---
 
-Install dependencies after pulling changes:
+## Run Locally
+
+1. Install dependencies:
 
 ```bash
 npm install
 ```
 
-## Learn More
+2. Start development server:
 
-To learn more about Next.js, take a look at the following resources:
+```bash
+npm run dev
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+3. Open:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+`http://localhost:3000`
 
-## Deploy on Vercel
+---
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Quality Checks
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Run lint:
+
+```bash
+npm run lint
+```
+
+Run production build:
+
+```bash
+npm run build
+```
+
+---
+
+## Contact / Hire Flow
+
+This portfolio currently uses a Gmail compose flow (no backend mail service):
+
+- **Hire me** button opens Gmail compose with recipient pre-filled
+- Contact form generates a pre-filled email (to/subject/body)
+- If Gmail web cannot open, fallback behavior is mail client-based
+
+---
+
+## Assets & Content Notes
+
+- Core images and proofs are stored under `public/assets`
+- Content growth tool logos are under `public/assets/tools`
+- Dashboard snapshots used in slider:
+	- `channel_dashboards.jpg`
+	- `channel_dashboards2.jpg`
+- Recognition document:
+	- `LETTER OF APPRECIATION.pdf`
+
+---
+
+## Personalization Tips
+
+To update your profile quickly:
+
+- Edit homepage and profile text in `app/page.jsx` and `app/profile/page.jsx`
+- Edit work project data in `app/work/page.jsx`
+- Edit content growth proof/collaboration data in `app/content-growth/page.jsx`
+
+---
+
+Built and maintained by Dibyanshu Chaubey.
