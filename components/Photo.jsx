@@ -56,9 +56,9 @@ const Photo = () => {
           whileHover={shouldReduceMotion ? undefined : { scale: 1.015, y: -4 }}
         >
           <motion.div
-            animate={shouldReduceMotion ? undefined : { y: [0, -7, 0] }}
+            animate={shouldReduceMotion ? undefined : { y: [0, 0, 0] }}
             transition={{ duration: 5.8, repeat: Infinity, ease: "easeInOut" }}
-            className="relative h-full w-full scale-[0.98] xl:scale-[1.02]"
+            className="relative h-[108%] w-full -bottom-4 scale-[0.98] xl:bottom-0 xl:h-full xl:scale-[1.02]"
           >
             <Image
               src="/assets/new_img-removebg-preview.png"
@@ -66,7 +66,7 @@ const Photo = () => {
               priority
               quality={100}
               fill
-              className="object-cover object-[center_81%] xl:object-center"
+              className="object-cover object-[center_86%] xl:object-center"
             />
           </motion.div>
         </motion.div>
