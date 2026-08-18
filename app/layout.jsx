@@ -35,7 +35,6 @@ const titanOne = Titan_One({
 export const metadata = {
   title: "Portfolio",
   description: "Portfolio of Dibyanshu Chaubey",
-  image: "/globe.svg",
 };
 
 export default function RootLayout({ children }) {

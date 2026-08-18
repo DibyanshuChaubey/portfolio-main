@@ -24,6 +24,8 @@ const Social = ({ containerStyles, iconStyles }) => {
           href={social.path}
           className={iconStyles}
           target="_blank"
+          rel="noopener noreferrer"
+          aria-label={`Visit Dibyanshu's ${index === 0 ? "GitHub" : index === 1 ? "LinkedIn" : "LeetCode"} profile`}
         >
           {social.icon}
         </Link>

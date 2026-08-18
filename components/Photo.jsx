@@ -22,7 +22,7 @@ const Photo = () => {
   }, []);
 
   return (
-    <div className="relative flex h-full w-full items-center justify-center py-4 xl:py-8">
+    <div className="relative -translate-y-3 flex h-full w-full items-center justify-center py-1 sm:-translate-y-4 sm:py-2 xl:-translate-y-6 xl:py-4">
       <motion.div
         initial={{ opacity: 0, y: 16 }}
         animate={{
@@ -34,7 +34,7 @@ const Photo = () => {
             ease: "easeOut",
           },
         }}
-        className="relative flex items-center justify-center"
+          className="relative flex aspect-square w-full items-center justify-center"
       >
         <motion.div
           aria-hidden="true"
@@ -66,7 +66,7 @@ const Photo = () => {
               ease: "easeInOut",
             },
           }}
-          className="relative z-10 h-[260px] w-[260px] overflow-hidden rounded-full border border-white/12 bg-[radial-gradient(circle_at_50%_28%,rgba(255,255,255,0.14),rgba(255,255,255,0.03)_48%,transparent_72%)] shadow-[0_24px_90px_rgba(0,0,0,0.28)] xl:h-[430px] xl:w-[430px]"
+          className="relative z-10 h-[min(78vw,260px)] w-[min(78vw,260px)] overflow-hidden rounded-full border border-white/12 bg-[radial-gradient(circle_at_50%_28%,rgba(255,255,255,0.14),rgba(255,255,255,0.03)_48%,transparent_72%)] shadow-[0_24px_90px_rgba(0,0,0,0.28)] xl:h-[430px] xl:w-[430px]"
           whileHover={shouldReduceMotion ? undefined : { scale: 1.015, y: -4 }}
         >
           <motion.div
@@ -81,7 +81,7 @@ const Photo = () => {
             className="relative h-[108%] w-full -bottom-4 scale-[0.98] xl:bottom-0 xl:h-full xl:scale-[1.02]"
           >
             <Image
-              src="/assets/new_img-removebg-preview.png"
+              src="/my_img.png"
               alt="Dibyanshu Chaubey"
               priority
               quality={100}

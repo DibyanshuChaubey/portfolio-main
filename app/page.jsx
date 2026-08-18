@@ -21,7 +21,7 @@ const Home = () => {
   };
 
   return (
-    <section className="relative min-h-[88vh] overflow-hidden pt-8 xl:pt-14">
+    <section className="relative min-h-[calc(100vh-7rem)] overflow-hidden pb-4 pt-4 font-sans sm:pt-8 xl:pt-10">
       <motion.div
         aria-hidden="true"
         className="pointer-events-none absolute -left-24 top-12 h-72 w-72 rounded-full bg-accent/25 blur-3xl"
@@ -35,47 +35,47 @@ const Home = () => {
         transition={{ duration: 10, repeat: Infinity, ease: "easeInOut" }}
       />
 
-      <div className="container mx-auto relative z-10">
-        <div className="flex flex-col xl:flex-row items-center gap-10 xl:gap-16 xl:pb-24">
-          <div className="order-2 xl:order-none w-full xl:w-[56%] text-center xl:text-left">
+      <div className="container relative z-10 mx-auto">
+        <div className="grid items-center gap-8 lg:grid-cols-[minmax(0,1.08fr)_minmax(340px,0.92fr)] lg:gap-10 xl:grid-cols-[minmax(0,1.12fr)_minmax(420px,0.88fr)] xl:gap-12 xl:pb-12">
+          <div className="order-2 w-full text-center lg:order-none lg:text-left">
             <motion.span
               initial={{ opacity: 0, y: 18 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.15, duration: 0.45 }}
-              className="inline-flex items-center rounded-full border border-white/20 bg-white/5 px-4 py-2 text-sm tracking-wider text-white/85"
+              className="inline-flex items-center rounded-full border border-white/15 bg-white/[0.05] px-4 py-2 text-xs font-medium uppercase tracking-[0.16em] text-white/70 sm:text-sm"
             >
-              Computer Science Student • Python & Flask Developer
+              Computer Science Student · Full-stack developer
             </motion.span>
 
             <motion.h1
               initial={{ opacity: 0, y: 24 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.25, duration: 0.55 }}
-              className="mt-5 mb-6 text-5xl xl:text-7xl font-extrabold leading-[1.05] titan-one"
+              className="mx-auto mb-5 mt-4 max-w-[13ch] text-[2.65rem] font-bold leading-[1.08] tracking-[-0.025em] text-white sm:text-5xl lg:mx-0 lg:text-6xl xl:text-[4.5rem]"
             >
-              <span className="block text-white">Building production-ready</span>
-              <span className="block bg-gradient-to-r from-accent via-violet-300 to-cyan-300 bg-clip-text text-transparent">
+              Building production-ready{" "}
+              <span className="bg-gradient-to-r from-accent via-violet-300 to-cyan-300 bg-clip-text text-transparent">
                 full-stack products
-              </span>
-              <span className="block text-white/95">with measurable impact</span>
+              </span>{" "}
+              with measurable impact.
             </motion.h1>
 
             <motion.p
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.4, duration: 0.5 }}
-              className="mx-auto xl:mx-0 max-w-[620px] mb-8 text-white/80 text-base xl:text-lg"
+              className="mx-auto mb-6 max-w-[37rem] text-base leading-7 text-white/70 sm:text-[1.0625rem] lg:mx-0"
             >
-              I&apos;m Dibyanshu Chaubey — I design and develop scalable web
-              applications using <strong>React, Python, Flask, and SQL</strong>,
-              focused on product clarity, performance, and real-world outcomes.
+              I&apos;m Dibyanshu Chaubey. I design and develop scalable web
+              applications with <strong className="font-semibold text-white/90">React, Python, Flask, and SQL</strong>,
+              with a focus on product clarity, performance, and real-world outcomes.
             </motion.p>
 
             <motion.div
               initial={{ opacity: 0, y: 14 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.55, duration: 0.45 }}
-              className="mb-8 flex flex-wrap justify-center xl:justify-start gap-2"
+              className="mb-6 flex flex-wrap justify-center gap-2 lg:justify-start"
             >
               {[
                 "React + TypeScript",
@@ -85,7 +85,7 @@ const Home = () => {
               ].map((tag) => (
                 <span
                   key={tag}
-                  className="rounded-full border border-white/15 bg-white/5 px-3 py-1.5 text-xs text-white/80"
+                  className="rounded-full border border-white/12 bg-white/[0.04] px-3 py-1.5 text-xs font-medium text-white/70"
                 >
                   {tag}
                 </span>
@@ -96,20 +96,20 @@ const Home = () => {
               initial={{ opacity: 0, y: 16 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.65, duration: 0.45 }}
-              className="flex flex-col sm:flex-row items-center justify-center xl:justify-start gap-4 sm:gap-6"
+              className="flex flex-col items-center justify-center gap-3 sm:flex-row lg:justify-start sm:gap-4"
             >
               <Button
                 size="lg"
-                className="uppercase flex items-center gap-2 rounded-full px-7 bg-accent text-primary hover:bg-accent-hover"
+                className="flex h-12 items-center gap-2 rounded-full bg-accent px-7 text-sm font-semibold uppercase tracking-wide text-primary shadow-[0_12px_35px_rgba(124,108,255,0.24)] hover:bg-accent-hover"
                 onClick={handleResumeDownload}
               >
-                <span className="font-semibold">Download CV</span>
+                <span>Download CV</span>
                 <FiDownload className="text-lg" />
               </Button>
 
               <Link
                 href="/work"
-                className="inline-flex h-11 items-center rounded-full border border-white/20 bg-white/5 px-6 text-sm font-medium text-white/90 transition-colors hover:border-accent hover:text-accent"
+                className="inline-flex h-12 items-center rounded-full border border-white/15 bg-white/[0.04] px-6 text-sm font-semibold text-white/85 transition-colors hover:border-accent hover:text-accent"
               >
                 View Projects
               </Link>
@@ -119,7 +119,7 @@ const Home = () => {
               initial={{ opacity: 0, y: 16 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.75, duration: 0.45 }}
-              className="mt-7 flex justify-center xl:justify-start"
+              className="mt-6 flex justify-center lg:justify-start"
             >
               <Socials
                 containerStyles="flex gap-3"
@@ -132,7 +132,7 @@ const Home = () => {
             initial={{ opacity: 0, scale: 0.95 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ delay: 0.35, duration: 0.6 }}
-            className="order-1 xl:order-none w-full xl:w-[44%]"
+            className="order-1 mx-auto w-full max-w-[36rem] lg:order-none"
           >
             <Photo />
           </motion.div>
