@@ -81,7 +81,7 @@ const Photo = () => {
             className="relative h-[108%] w-full -bottom-4 scale-[0.98] xl:bottom-0 xl:h-full xl:scale-[1.02]"
           >
             <Image
-              src="/assets/new_img-removebg-preview.png"
+              src="/assets/myimg.png"
               alt="Dibyanshu Chaubey"
               priority
               quality={100}
