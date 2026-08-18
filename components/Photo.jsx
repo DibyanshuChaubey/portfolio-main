@@ -81,7 +81,11 @@ const Photo = () => {
             className="relative h-[108%] w-full -bottom-4 scale-[0.98] xl:bottom-0 xl:h-full xl:scale-[1.02]"
           >
             <Image
+<<<<<<< HEAD
               src="/my_img.png"
+=======
+              src="/assets/myimg.png"
+>>>>>>> 254bbcab66b84d1dfc8d22c0d5436e8cf39731d5
               alt="Dibyanshu Chaubey"
               priority
               quality={100}
